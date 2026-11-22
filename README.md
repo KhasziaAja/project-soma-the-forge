@@ -7,18 +7,73 @@
 <a name="english"></a>
 ## ── English Overview
 
-> **Autonomous Physical-Sensing Infrastructure & Negative-IP Liquidation Engine**
-> A unified, self-sovereign systemic framework combining edge physical sensing, a dual-mode legal fortress, and a negative-IP clearance protocol.
+**Autonomous Physical-Sensing Infrastructure & Negative-IP Liquidation Engine**
+
+A unified, self-sovereign systemic framework combining edge physical sensing, a dual-mode legal fortress, and a negative-IP clearance protocol.
 
 ### Architecture Highlights
-- **Project SOMA (Physical-AI OS):** Zero-touch physical data mining, DFA chaos verification, and dual-mode legal boundaries (Japan Civil Code Art. 593 / US 1099-NEC).
-- **The Forge:** Clearance protocol for negative IP (failed research logs), topological state transition (SATORI Engine), zero-knowledge proof binding, and dynamic royalty distribution (D&A Model).
+
+* **Project SOMA (Physical-AI OS):** Zero-touch physical data mining, DFA chaos verification, asynchronous B2B task relay, and dual-mode legal boundaries (Japan Civil Code Art. 593 / US 1099-NEC).
+* **The Forge:** Clearance protocol for negative IP (failed research logs), topological state transition (SATORI Engine), zero-knowledge proof binding, and dynamic royalty distribution (D&A Model).
+
+---
+
+### Repository Architecture
+
+```text
+repository-root/
+├── README.md                              # Unified Master Portal (SOMA & The Forge)
+├── ARCHITECT_NOTES.md                     # System Architect Behavioral Parameters
+├── DISCLAIMER.md                          # Research & Legal Disclaimers
+├── LICENSE                                # MIT License
+├── docs/
+│   ├── soma/
+│   │   ├── ja/                            # Project SOMA Japanese Specs (6 files)
+│   │   │   ├── 01_system_topology.ja.md
+│   │   │   ├── 02_paios_physical_mining.ja.md
+│   │   │   ├── 03_soma_guild_b2b.ja.md
+│   │   │   ├── 04_tokenomics_finance.ja.md
+│   │   │   ├── 05_legal_fortress_0yen.ja.md
+│   │   │   └── 06_resilience_nasa_mode.ja.md
+│   │   └── en/                            # Project SOMA English Specs (6 files)
+│   │       ├── 01_system_topology.en.md
+│   │       ├── 02_paios_physical_mining.en.md
+│   │       ├── 03_soma_guild_b2b.en.md
+│   │       ├── 04_tokenomics_finance.en.md
+│   │       ├── 05_legal_fortress_0yen.en.md
+│   │       └── 06_resilience_nasa_mode.en.md
+│   └── forge/
+│       ├── ja/                            # The Forge Japanese Specs (8 files)
+│       │   ├── 01_system_overview.ja.md
+│       │   ├── 02_satori_zkp.ja.md
+│       │   ├── 03_proof_of_trust.ja.md
+│       │   ├── 04_tokenomics.ja.md
+│       │   ├── 05_d_and_a_model.ja.md
+│       │   ├── 06_governance.ja.md
+│       │   ├── 07_the_pulse.ja.md
+│       │   └── 08_legal_compliance.ja.md
+│       └── en/                            # The Forge English Specs (8 files)
+│           ├── 01_system_overview.en.md
+│           ├── 02_satori_zkp.en.md
+│           ├── 03_proof_of_trust.en.md
+│           ├── 04_tokenomics.en.md
+│           ├── 05_d_and_a_model.en.md
+│           ├── 06_governance.en.md
+│           ├── 07_the_pulse.en.md
+│           └── 08_legal_compliance.en.md
+└── issues/
+    ├── SOMA_ISSUES_JP.md                  # SOMA Priority Friction Points (JP)
+    ├── SOMA_ISSUES_EN.md                  # SOMA Priority Friction Points (EN)
+    ├── FORGE_ISSUES_JP.md                 # The Forge Audit Issues (JP)
+    └── FORGE_ISSUES_EN.md                 # The Forge Audit Issues (EN)
+```
 
 ---
 
 ### System Architecture Diagrams
 
 #### 1. Project SOMA Topology
+
 ```mermaid
 flowchart TD
     subgraph PAIOS_LAYER [1. PAIOS 物理・エッジセンシング層]
@@ -59,6 +114,7 @@ flowchart TD
 ```
 
 #### 2. The Forge Pipeline
+
 ```mermaid
 flowchart TD
     subgraph SG1 [1. 生データ投入 & コア秘匿層]
@@ -140,14 +196,57 @@ flowchart TD
 
 ---
 
-### Repository Navigation (Documents)
+### Repository Navigation (Modular Specifications)
+
+#### 1. Project SOMA Specification (Physical-AI OS & Social Infrastructure)
+
+| Module / Chapter | Focus Area | Japanese (日本語) | English (英語) |
+| :--- | :--- | :--- | :--- |
+| **Ch.1 System Topology** | 総論・存在の価値化・ESG/SIB | [01_system_topology.ja.md](./docs/soma/ja/01_system_topology.ja.md) | [01_system_topology.en.md](./docs/soma/en/01_system_topology.en.md) |
+| **Ch.2 PAIOS Edge Mining** | 物理センシング・PoU V2.1・DFAカオス | [02_paios_physical_mining.ja.md](./docs/soma/ja/02_paios_physical_mining.ja.md) | [02_paios_physical_mining.en.md](./docs/soma/en/02_paios_physical_mining.en.md) |
+| **Ch.3 SOMA Guild B2B** | 24時間時差リレー・FDR-V2文脈剥離 | [03_soma_guild_b2b.ja.md](./docs/soma/ja/03_soma_guild_b2b.ja.md) | [03_soma_guild_b2b.en.md](./docs/soma/en/03_soma_guild_b2b.en.md) |
+| **Ch.4 Tokenomics & Finance** | R2S現物レバレッジ・CWE・GPR指数 | [04_tokenomics_finance.ja.md](./docs/soma/ja/04_tokenomics_finance.ja.md) | [04_tokenomics_finance.en.md](./docs/soma/en/04_tokenomics_finance.en.md) |
+| **Ch.5 Legal Fortress & 0-Yen** | 日米デュアル法務・民法593条・0円生活 | [05_legal_fortress_0yen.ja.md](./docs/soma/ja/05_legal_fortress_0yen.ja.md) | [05_legal_fortress_0yen.en.md](./docs/soma/en/05_legal_fortress_0yen.en.md) |
+| **Ch.6 Resilience & NASA Mode** | 4段階縮退・救済オラクル・創発バウンティ | [06_resilience_nasa_mode.ja.md](./docs/soma/ja/06_resilience_nasa_mode.ja.md) | [06_resilience_nasa_mode.en.md](./docs/soma/en/06_resilience_nasa_mode.en.md) |
+
+#### 2. The Forge Specification (Negative-IP Liquidation Engine)
+
+| Module / Chapter | Focus Area | Japanese (日本語) | English (英語) |
+| :--- | :--- | :--- | :--- |
+| **Ch.1 System Overview** | アーキテクチャ総論・知能金融 | [01_system_overview.ja.md](./docs/forge/ja/01_system_overview.ja.md) | [01_system_overview.en.md](./docs/forge/en/01_system_overview.en.md) |
+| **Ch.2 SATORI & ZKP** | 文脈剥離・補空間相転移アルゴリズム | [02_satori_zkp.ja.md](./docs/forge/ja/02_satori_zkp.ja.md) | [02_satori_zkp.en.md](./docs/forge/en/02_satori_zkp.en.md) |
+| **Ch.3 Proof-of-Trust** | ROOTS物理代償・TFA 3層監査回路 | [03_proof_of_trust.ja.md](./docs/forge/ja/03_proof_of_trust.ja.md) | [03_proof_of_trust.en.md](./docs/forge/en/03_proof_of_trust.en.md) |
+| **Ch.4 Tokenomics** | D-LOG二重通貨・3軸動的境界線 | [04_tokenomics.ja.md](./docs/forge/ja/04_tokenomics.ja.md) | [04_tokenomics.en.md](./docs/forge/en/04_tokenomics.en.md) |
+| **Ch.5 D&A Model** | 開発モデル・動的ロイヤリティ分配 | [05_d_and_a_model.ja.md](./docs/forge/ja/05_d_and_a_model.ja.md) | [05_d_and_a_model.en.md](./docs/forge/en/05_d_and_a_model.en.md) |
+| **Ch.6 Governance** | ガバナンス防腐・EU適合4フェーズ回路 | [06_governance.ja.md](./docs/forge/ja/06_governance.ja.md) | [06_governance.en.md](./docs/forge/en/06_governance.en.md) |
+| **Ch.7 The Pulse** | 予測インデックス・市場操作防腐 | [07_the_pulse.ja.md](./docs/forge/ja/07_the_pulse.ja.md) | [07_the_pulse.en.md](./docs/forge/en/07_the_pulse.en.md) |
+| **Ch.8 Legal Compliance** | 地政学・知財金庫シェルター・輸出管理 | [08_legal_compliance.ja.md](./docs/forge/ja/08_legal_compliance.ja.md) | [08_legal_compliance.en.md](./docs/forge/en/08_legal_compliance.en.md) |
+
+---
+
+### Domain-Specific Gateways (For External Specialists)
+
+* 📊 **For Quants & Tokenomics Designers:**
+  $\to$ **SOMA:** [Ch.4 Tokenomics & Finance](./docs/soma/en/04_tokenomics_finance.en.md) | **Forge:** [Ch.4 Tokenomics](./docs/forge/en/04_tokenomics.en.md) & [Ch.5 D&A Model](./docs/forge/en/05_d_and_a_model.en.md)
+  *(R2S in-kind leverage, clamped GPR hedge pools, dynamic Proof-of-Burn, DAG royalty split, Mild FMP v2.0)*
+* 🔐 **For Cryptographers, Hardware & Security Engineers:**
+  $\to$ **SOMA:** [Ch.2 PAIOS Edge Mining](./docs/soma/en/02_paios_physical_mining.en.md) | **Forge:** [Ch.2 SATORI & ZKP](./docs/forge/en/02_satori_zkp.en.md) & [Ch.3 Proof-of-Trust](./docs/forge/en/03_proof_of_trust.en.md)
+  *(Monolithic SoC enclaves, DFA chaos & EMD gating, Groth16 stealth queries, PUF/SGX physical receipts, TFA 3-tier audit)*
+* ⚖️ **For Legal Engineers & Regulatory Analysts:**
+  $\to$ **SOMA:** [Ch.5 Legal Fortress & 0-Yen](./docs/soma/en/05_legal_fortress_0yen.en.md) | **Forge:** [Ch.6 Governance](./docs/forge/en/06_governance.en.md) & [Ch.8 Legal Compliance](./docs/forge/en/08_legal_compliance.en.md)
+  *(JP Civil Code Sec. 593 corporate separation, US AB5 / HUD FMR 1099 automation, EU AI Act 4-phase timelock, Wassenaar dual-use quarantine, multi-polar IP Vault)*
+* 🧠 **For AI & Complex Systems Researchers:**
+  $\to$ **SOMA:** [Ch.3 SOMA Guild B2B](./docs/soma/en/03_soma_guild_b2b.en.md) & [Ch.6 Resilience](./docs/soma/en/06_resilience_nasa_mode.en.md) | **Forge:** [Ch.2 SATORI & ZKP](./docs/forge/en/02_satori_zkp.en.md) & [Ch.7 The Pulse](./docs/forge/en/07_the_pulse.en.md)
+  *(Manifold reduction $\mathbb{R}^D \to \mathbb{R}^d$, complementary space phase transition, bounded task re-chunking, NASA Safe-Mode degradation, clamped Z-score market signals)*
+
+---
+
+### Audit Issues & Core Governance
 
 | Category | Japanese (日本語) | English (英語) |
-|---|---|---|
-| **SOMA Specification** | [SOMA_WHITEPAPER_JP.md](./SOMA_WHITEPAPER_JP.md) | [SOMA_WHITEPAPER_EN.md](./SOMA_WHITEPAPER_EN.md) |
-| **The Forge Specification** | [FORGE_WHITEPAPER_JP.md](./FORGE_WHITEPAPER_JP.md) | [FORGE_WHITEPAPER_EN.md](./FORGE_WHITEPAPER_EN.md) |
-| **SOMA Audit Issues** | [SOMA_ISSUES_JP.md](./SOMA_ISSUES_JP.md) | [SOMA_ISSUES_EN.md](./SOMA_ISSUES_EN.md) |
-| **The Forge Audit Issues** | [FORGE_ISSUES_JP.md](./FORGE_ISSUES_JP.md) | [FORGE_ISSUES_EN.md](./FORGE_ISSUES_EN.md) |
+| :--- | :--- | :--- |
+| **SOMA Audit Issues** | [SOMA_ISSUES_JP.md](./issues/SOMA_ISSUES_JP.md) | [SOMA_ISSUES_EN.md](./issues/SOMA_ISSUES_EN.md) |
+| **The Forge Audit Issues** | [FORGE_ISSUES_JP.md](./issues/FORGE_ISSUES_JP.md) | [FORGE_ISSUES_EN.md](./issues/FORGE_ISSUES_EN.md) |
 | **Architect Manifesto** | [ARCHITECT_NOTES.md](./ARCHITECT_NOTES.md) | [ARCHITECT_NOTES.md](./ARCHITECT_NOTES.md) |
 | **Disclaimer & License** | [DISCLAIMER.md](./DISCLAIMER.md) | [DISCLAIMER.md](./DISCLAIMER.md) |
 
@@ -158,27 +257,28 @@ flowchart TD
 
 本プロジェクトは、人間の悪意や制度のバグを前提とし、物理・金融・法務の3レイヤーで防腐化された自律型社会インフラ・システムです。
 
-- **Project SOMA:** 物理行動データ採掘（PAIOS）および民法593条（使用貸借）等による法的実効境界。
-- **The Forge:** 失敗データ（負の知財）のSATORI相転移および暗号学的動的ロイヤリティ分配エンジン。
+* **Project SOMA:** 物理行動データ採掘（PAIOS）、24時間時差B2Bギルド、および民法593条（使用貸借）・米国AB5法適合による法的実効境界（全6章）。
+* **The Forge:** 失敗データ（負の知財）のSATORI補空間相転移および暗号学的動的ロイヤリティ分配エンジン（全8章）。
 
-詳細は上記のドキュメント目次より各仕様書・課題リストを参照してください。
+各専門領域のモジュール（計28ファイル・日英完全対応）および課題リストは、上記の **Repository Navigation** テーブルより直接参照できます。
 
 ---
 
 ## ── Maintenance & Response Protocol (連絡・応答方針)
 
 ### English
-- **Communication Style:** Asynchronous & Irregular.
-- **Availability:** Responses to Issues, Discussions, and Pull Requests are handled on an irregular basis (primarily during weekends) depending on capacity. 
-- **Policy:** Urgent demands or sentimental pressure will be ignored. Contributions and critical technical feedback are always reviewed asynchronously when bandwidth permits.
+* **Communication Style:** Asynchronous & Irregular.
+* **Availability:** Responses to Issues, Discussions, and Pull Requests are handled on an irregular basis (primarily during weekends) depending on capacity.
+* **Policy:** Urgent demands or sentimental pressure will be ignored. Contributions and critical technical feedback are always reviewed asynchronously when bandwidth permits.
 
 ### 日本語
-- **通信スタイル:** 完全非同期・不定期応答。
-- **稼働状態:** Issue、Discussion、Pull Request への確認・返信は、本業およびプライベートの合間（主に週末）に不定期で行われます。
-- **方針:** 返信の催促や情緒的な要求には対応しません。提案や技術的フィードバックは、リソースが確保できたタイミングで非同期に確認します。
+* **通信スタイル:** 完全非同期・不定期応答。
+* **稼働状態:** Issue、Discussion、Pull Request への確認・返信は、本業およびプライベートの合間（主に週末）に不定期で行われます。
+* **方針:** 返信の催促や情緒的な要求には対応しません。提案や技術的フィードバックは、リソースが確保できたタイミングで非同期に確認します。
 
 ---
 
 ## ── License & Disclaimer
-- **License:** MIT License
-- **Disclaimer:** See [DISCLAIMER.md](./DISCLAIMER.md) for research & legal disclaimers.
+
+* **License:** MIT License
+* **Disclaimer:** See [DISCLAIMER.md](./DISCLAIMER.md) for research & legal disclaimers.
