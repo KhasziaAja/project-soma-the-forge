@@ -1,6 +1,6 @@
 # 第6章 ガバナンス防腐と国際法適合回路：EU-Compliant 4フェーズプロトコル
 
-[← 第5章 統合開発モデル：D&Aと動的ロイヤリティ](./05_d_and_a_model.ja.md) | [目次に戻る](../../README.md) | [第7章 予測インデックス：The Pulse →](./07_the_pulse.ja.md)
+[← 第5章 統合開発モデル：D&Aと動的ロイヤリティ](./05_d_and_a_model.ja.md) | [目次に戻る](../../../README.md) | [第7章 予測インデックス：The Pulse →](./07_the_pulse.ja.md)
 
 ## 概要と目的
 
@@ -97,12 +97,12 @@
 
 |  | 違反企業 E: Phase 2 で Cure Fee 納付 | 違反企業 E: 放置・和解拒否（反証なし） | 
 | ----- | ----- | ----- | 
-| **経済的損失** | $-C_{\text{cure}}$（正規料率 $\times \kappa_{\text{penalty}}$） | $-L_{\text{scorched}}$（全特許無効化＋取引網永久追放） | 
+| **経済的損失** | $-C_{\text{cure}}$ （正規料率 $\times \kappa_{\text{penalty}}$ ） | $-L_{\text{scorched}}$ （全特許無効化＋取引網永久追放） | 
 | **事業継続性** | 正規ライセンスへ移行し販売継続可能 | サプライチェーン凍結・対象事業消滅 | 
 
-* **経済合理性条件:** $L_{\text{scorched}} \gg C_{\text{cure}} > C_{\text{normal}}$（例: $\kappa_{\text{penalty}} = 1.5$）
+* **経済合理性条件:** $L_{\text{scorched}} \gg C_{\text{cure}} > C_{\text{normal}}$ （例: $\kappa_{\text{penalty}} = 1.5$ ）
 
-これにより、不正が検知された企業にとって「裁判で時間を稼ぐ・無視する」ことは最悪の破滅（$-L_{\text{scorched}}$）を招くため、Phase 1 で速やかに ACK を返し、Phase 2 で Cure Fee を支払って正規エコシステムへ合流する行動（Soft-Landing）が唯一の合理的な支配戦略となる。
+これにより、不正が検知された企業にとって「裁判で時間を稼ぐ・無視する」ことは最悪の破滅（ $-L_{\text{scorched}}$ ）を招くため、Phase 1 で速やかに ACK を返し、Phase 2 で Cure Fee を支払って正規エコシステムへ合流する行動（Soft-Landing）が唯一の合理的な支配戦略となる。
 
 ## 6.4 Mathematical Formula
 
@@ -110,7 +110,7 @@
 
 ### 式 6.1: 段階的追徴和解金（Cure Fee）算定式
 
-無断商業化期間中に企業が得た不正利得を清算しつつ、早期和解を促す追徴和解金 $C_{\text{cure}}(t_{\text{delay}})$：
+無断商業化期間中に企業が得た不正利得を清算しつつ、早期和解を促す追徴和解金 $C_{\text{cure}}(t_{\text{delay}})$ ：
 
 $$
 C_{\text{cure}}(t_{\text{delay}}) = R_{\text{unpaid}} \cdot \left( 1 + \kappa_{\text{base}} + \eta_{\text{delay}} \cdot \frac{\max(0, \; t_{\text{delay}} - T_{\text{grace}})}{T_{\text{phase2}}} \right) + C_{\text{forensic}}
@@ -124,21 +124,21 @@ $$
 
 * $t_{\text{delay}} \ge 0$: 通知送達から決済完了までの経過時間
 
-* $T_{\text{grace}}$: 初期無ペナルティ猶予期間（例: $7$ 日間）、$T_{\text{phase2}} = 30$ 日間
+* $T_{\text{grace}}$: 初期無ペナルティ猶予期間（例: $7$ 日間）、 $T_{\text{phase2}} = 30$ 日間
 
 * $C_{\text{forensic}} \ge 0$: SATORI および外部監査人が要したフォレンジック調査実費
 
 ### 式 6.2: IQ-FTC 拒否権（Veto）発動判定関数
 
-Phase 3 において、誤検知（False Positive）や不当な焦土作戦を阻止するための 9 名合議体判定関数 $\mathbb{I}_{\text{veto}} \in \{0, 1\}$：
+Phase 3 において、誤検知（False Positive）や不当な焦土作戦を阻止するための 9 名合議体判定関数 $\mathbb{I}_{\text{veto}} \in \{0, 1\}$ ：
 
 $$
 \mathbb{I}_{\text{veto}} = \mathbb{I}\left( \sum_{m=1}^{9} v_m \cdot \mathbb{I}_{\text{conflict}, m} \ge 5 \right)
 $$
 
-* $v_m \in \{0, 1\}$: $m$ 番目の独立監査人の拒否権賛成票（$1$: 執行停止に賛成、$0$: 反対・棄権）
+* $v_m \in \{0, 1\}$: $m$ 番目の独立監査人の拒否権賛成票（ $1$: 執行停止に賛成、 $0$: 反対・棄権）
 
-* $\mathbb{I}_{\text{conflict}, m} \in \{0, 1\}$: 利益相反ゼロ証明（対象企業との資本・顧問関係がない場合 $1$、利益相反検知時は投票権剥奪で $0$）
+* $\mathbb{I}_{\text{conflict}, m} \in \{0, 1\}$: 利益相反ゼロ証明（対象企業との資本・顧問関係がない場合 $1$ 、利益相反検知時は投票権剥奪で $0$ ）
 
 * $5$: 過半数クォーラム閾値（5/9 以上の有効票が揃わない限り、Phase 4 の自動執行は停止しない）
 
@@ -164,12 +164,12 @@ $$
 
 * **想定される破綻モード（Failure Modes）:**
 
-  * 企業の M&A や組織再編に対するオラクル誤判定による焦土作戦の誤起動リスク（関連: [ISSUE-027](../../issues/FORGE_ISSUES_JP.md)）。
+  * 企業の M&A や組織再編に対するオラクル誤判定による焦土作戦の誤起動リスク（関連: [ISSUE-027](../../../issues/FORGE_ISSUES_JP.md)）。
 
-  * 倒産企業の失敗ログ資産に対する担保権者（VC・銀行）とプラットフォーム間の優先権紛争（関連: [ISSUE-028](../../issues/FORGE_ISSUES_JP.md)）。
+  * 倒産企業の失敗ログ資産に対する担保権者（VC・銀行）とプラットフォーム間の優先権紛争（関連: [ISSUE-028](../../../issues/FORGE_ISSUES_JP.md)）。
 
-  * 小口分散化された知財トークン保有者間での DAO ガバナンス膠着（クォーラム未達）（関連: [ISSUE-029](../../issues/FORGE_ISSUES_JP.md)）。
+  * 小口分散化された知財トークン保有者間での DAO ガバナンス膠着（クォーラム未達）（関連: [ISSUE-029](../../../issues/FORGE_ISSUES_JP.md)）。
 
 * **監査・PoC検証要件:** EU AI Act 第14条および GDPR 第22条（自動化された意思決定に対する異議申立権）への法務適合性レビュー。
 
-[← 第5章 統合開発モデル：D&Aと動的ロイヤリティ](./05_d_and_a_model.ja.md) | [目次に戻る](../../README.md) | [第7章 予測インデックス：The Pulse →](./07_the_pulse.ja.md)
+[← 第5章 統合開発モデル：D&Aと動的ロイヤリティ](./05_d_and_a_model.ja.md) | [目次に戻る](../../../README.md) | [第7章 予測インデックス：The Pulse →](./07_the_pulse.ja.md)

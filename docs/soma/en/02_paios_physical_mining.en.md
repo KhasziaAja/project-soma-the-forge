@@ -1,6 +1,6 @@
 # Chapter 2: Physical & Edge Sensing Layer — PAIOS (Physical-AI OS) Data Mining & Hardware Fortress
 
-[← Chapter 1: Executive Summary & System Architecture](./01_system_topology.en.md) | [Back to Index](../../README.md) | [Chapter 3: Autonomous B2B Task Guild →](./03_soma_guild_b2b.en.md)
+[← Chapter 1: Executive Summary & System Architecture](./01_system_topology.en.md) | [Back to Index](../../../README.md) | [Chapter 3: Autonomous B2B Task Guild →](./03_soma_guild_b2b.en.md)
 
 ## Overview & Purpose
 
@@ -170,8 +170,8 @@ $$
 
 * **Assumptions:** Electromechanical delay (EMD) gating in this chapter assumes users possess intact neuromuscular conduction pathways without implanted cardiac pacemakers or severe neurodegenerative conditions (designated welfare-exemption profiles apply to eligible individuals).
 * **Failure Modes:**
-  * Surface EMG electrode impedance spikes caused by heavy perspiration, dry skin, or body hair under the neck/lumbar patch, leading to intermittent signal dropout (See: [ISSUE-002](../../issues/SOMA_ISSUES_EN.md)).
-  * Temporary drift in DFA $\alpha$ estimates during high-intensity industrial motion artifacts (See: [ISSUE-003](../../issues/SOMA_ISSUES_EN.md)).
+  * Surface EMG electrode impedance spikes caused by heavy perspiration, dry skin, or body hair under the neck/lumbar patch, leading to intermittent signal dropout (See: [ISSUE-002](../../../issues/SOMA_ISSUES_EN.md)).
+  * Temporary drift in DFA $\alpha$ estimates during high-intensity industrial motion artifacts (See: [ISSUE-003](../../../issues/SOMA_ISSUES_EN.md)).
 * **Verification / PoC Requirements:** Field validation across $N = 100$ human subjects using monolithic SoC prototypes to verify False Rejection Rate ($\text{FRR} < 1.5\%$) and False Acceptance Rate ($\text{FAR} < 0.01\%$).
 
-[← Chapter 1: Executive Summary & System Architecture](./01_system_topology.en.md) | [Back to Index](../../README.md) | [Chapter 3: Autonomous B2B Task Guild →](./03_soma_guild_b2b.en.md)
+[← Chapter 1: Executive Summary & System Architecture](./01_system_topology.en.md) | [Back to Index](../../../README.md) | [Chapter 3: Autonomous B2B Task Guild →](./03_soma_guild_b2b.en.md)

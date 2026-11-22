@@ -1,6 +1,6 @@
 # Chapter 5 Integrated Development Model: D&A (Debug & Assembly) and Dynamic Royalty Split
 
-[← Chapter 4 Economic & Tokenomics Mathematics: D-LOG Protocol](./04_tokenomics.en.md) | [Back to Index](../../README.md) | [Chapter 6 Governance Anti-Corruptibility & International Compliance Circuit →](./06_governance.en.md)
+[← Chapter 4 Economic & Tokenomics Mathematics: D-LOG Protocol](./04_tokenomics.en.md) | [Back to Index](../../../README.md) | [Chapter 6 Governance Anti-Corruptibility & International Compliance Circuit →](./06_governance.en.md)
 
 ## Overview & Purpose
 
@@ -152,10 +152,10 @@ We present anticipated attack vectors and defense valves for the D&A model and d
 
 * **Assumptions:** Automated royalty distribution in this chapter assumes that commercial product revenues or shipment volumes are verifiable via oracles (ERP integration, settlement smart contracts, or audit attestations).
 * **Failure Modes:**
-  * Ambiguity in attributing exact individual failure-data contributions ($\text{BRS}_i$) within complex multi-technology composite products (See: [ISSUE-016](../../issues/FORGE_ISSUES_EN.md)).
-  * Difficulty tracking commercial revenue in closed B2B contracts or classified defense/internal infrastructure deployments (See: [ISSUE-017](../../issues/FORGE_ISSUES_EN.md)).
-  * Escalating on-chain gas costs as Directed Acyclic Graph (DAG) depth expands (See: [ISSUE-018](../../issues/FORGE_ISSUES_EN.md)).
-  * Cross-licensing conflicts with legacy mega-tech patent pools (See: [ISSUE-019](../../issues/FORGE_ISSUES_EN.md)).
+  * Ambiguity in attributing exact individual failure-data contributions ($\text{BRS}_i$) within complex multi-technology composite products (See: [ISSUE-016](../../../issues/FORGE_ISSUES_EN.md)).
+  * Difficulty tracking commercial revenue in closed B2B contracts or classified defense/internal infrastructure deployments (See: [ISSUE-017](../../../issues/FORGE_ISSUES_EN.md)).
+  * Escalating on-chain gas costs as Directed Acyclic Graph (DAG) depth expands (See: [ISSUE-018](../../../issues/FORGE_ISSUES_EN.md)).
+  * Cross-licensing conflicts with legacy mega-tech patent pools (See: [ISSUE-019](../../../issues/FORGE_ISSUES_EN.md)).
 * **Verification / PoC Requirements:** Gas cost and computational complexity benchmarks for batch royalty distribution over large-scale DAGs ($N > 10,000$ nodes) on L2 ZK-Rollups.
 
-[← Chapter 4 Economic & Tokenomics Mathematics: D-LOG Protocol](./04_tokenomics.en.md) | [Back to Index](../../README.md) | [Chapter 6 Governance Anti-Corruptibility & International Compliance Circuit →](./06_governance.en.md)
+[← Chapter 4 Economic & Tokenomics Mathematics: D-LOG Protocol](./04_tokenomics.en.md) | [Back to Index](../../../README.md) | [Chapter 6 Governance Anti-Corruptibility & International Compliance Circuit →](./06_governance.en.md)

@@ -1,6 +1,6 @@
 # Chapter 4: Decentralized Tokenomics & Financial Engineering — R2S, CWE, Graduated Factoring, & GPR
 
-[← Chapter 3: Autonomous B2B Task Guild](./03_soma_guild_b2b.en.md) | [Back to Index](../../README.md) | [Chapter 5: International Legal & Compliance Fortress →](./05_legal_fortress_0yen.en.md)
+[← Chapter 3: Autonomous B2B Task Guild](./03_soma_guild_b2b.en.md) | [Back to Index](../../../README.md) | [Chapter 5: International Legal & Compliance Fortress →](./05_legal_fortress_0yen.en.md)
 
 ## Overview & Purpose
 
@@ -143,7 +143,7 @@ $$\text{Leverage}_{\text{R2S}} = \frac{V_{\text{retail\_service}}}{\max\left( C_
 
 Purchasing-power normalization multiplier $\text{GPR}_{\text{index}}(r, t) \in [0.50, \; 2.50]$ for region $r$ at time $t$:
 
-$$\text{GPR}_{\text{raw}}(r, t) = w_{\text{bm}} \cdot \frac{\text{PPP}_{\text{BigMac}}(r, t)}{\text{PPP}_{\text{base}}} + w_{\text{cpi}} \cdot \frac{\text{CPI}_{\text{local}}(r, t)}{\text{CPI}_{\text{base}}} + w_{\text{fx}} \cdot \frac{\text{FX}_{\text{USD}}(r, t)}{\text{FX}_{\text{base}}}$$
+$$\text{GPR}_{\text{raw}}(r, t) = w_{\text{bm}} \cdot \frac_{\text{PPP}_{\text{BigMac}}(r, t)}{\text{PPP}_{\text{base}}} + w_{\text{cpi}} \cdot \frac{\text{CPI}_{\text{local}}(r, t)}{\text{CPI}_{\text{base}}} + w_{\text{fx}} \cdot \frac{\text{FX}_{\text{USD}}(r, t)}{\text{FX}_{\text{base}}}$$
 
 $$\text{GPR}_{\text{index}}(r, t) = \text{clamp}_{[0.50, \; 2.50]}\left( \text{GPR}_{\text{raw}}(r, t) \right)$$
 
@@ -163,8 +163,8 @@ $$\text{GPR}_{\text{index}}(r, t) = \text{clamp}_{[0.50, \; 2.50]}\left( \text{G
 
 * **Assumptions:** R2S in-kind rebates and atomic 3-way splits assume 24/7 operational availability of stablecoin or API-banking settlement rails synchronized with smart contract oracles.
 * **Failure Modes:**
-  * Potential under-capitalization of the $0.1\%$ insurance hedge pool during simultaneous multi-currency shocks (See: [ISSUE-008](../../issues/SOMA_ISSUES_EN.md)).
-  * Legal friction between Future Earnings Liens in graduated factoring and statutory "payment of wages in full" mandates under national labor laws (See: [ISSUE-009](../../issues/SOMA_ISSUES_EN.md)).
+  * Potential under-capitalization of the $0.1\%$ insurance hedge pool during simultaneous multi-currency shocks (See: [ISSUE-008](../../../issues/SOMA_ISSUES_EN.md)).
+  * Legal friction between Future Earnings Liens in graduated factoring and statutory "payment of wages in full" mandates under national labor laws (See: [ISSUE-009](../../../issues/SOMA_ISSUES_EN.md)).
 * **Verification / PoC Requirements:** Monte Carlo stochastic FX-shock stress testing confirming insurance hedge pool insolvency probability $< 0.01\%$.
 
-[← Chapter 3: Autonomous B2B Task Guild](./03_soma_guild_b2b.en.md) | [Back to Index](../../README.md) | [Chapter 5: International Legal & Compliance Fortress →](./05_legal_fortress_0yen.en.md)
+[← Chapter 3: Autonomous B2B Task Guild](./03_soma_guild_b2b.en.md) | [Back to Index](../../../README.md) | [Chapter 5: International Legal & Compliance Fortress →](./05_legal_fortress_0yen.en.md)

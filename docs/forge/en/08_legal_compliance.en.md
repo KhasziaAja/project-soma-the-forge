@@ -1,6 +1,6 @@
 # Chapter 8 Legal, Geopolitical, and International Compliance Architecture
 
-[← Chapter 7 Predictive Index: The Pulse](./07_the_pulse.en.md) | [Back to Index](../../README.md)
+[← Chapter 7 Predictive Index: The Pulse](./07_the_pulse.en.md) | [Back to Index](../../../README.md)
 
 ## Overview & Purpose
 
@@ -164,10 +164,10 @@ We present anticipated attack vectors and defense valves across the internationa
 
 * **Failure Modes:**
 
-  * Geopolitical fragmentation risk where access vetting criteria for L3 (Strategic Sanctuary Darkpool) become skewed toward specific political blocs during armed conflicts or sanctions regimes (See: [ISSUE-025](../../issues/FORGE_ISSUES_EN.md)).
+  * Geopolitical fragmentation risk where access vetting criteria for L3 (Strategic Sanctuary Darkpool) become skewed toward specific political blocs during armed conflicts or sanctions regimes (See: [ISSUE-025](../../../issues/FORGE_ISSUES_EN.md)).
 
-  * Choice-of-law conflicts regarding patent rights and Prior Art status for cross-border joint inventions and auto-derived phase-transition recipes (See: [ISSUE-026](../../issues/FORGE_ISSUES_EN.md)).
+  * Choice-of-law conflicts regarding patent rights and Prior Art status for cross-border joint inventions and auto-derived phase-transition recipes (See: [ISSUE-026](../../../issues/FORGE_ISSUES_EN.md)).
 
 * **Verification / PoC Requirements:** Compliance audit of Wassenaar Arrangement category mappings by international trade counsel, alongside statistical Membership Inference Attack stress testing at $\epsilon = 0.10$.
 
-[← Chapter 7 Predictive Index: The Pulse](./07_the_pulse.en.md) | [Back to Index](../../README.md)
+[← Chapter 7 Predictive Index: The Pulse](./07_the_pulse.en.md) | [Back to Index](../../../README.md)

@@ -1,6 +1,6 @@
 # Chapter 6: Resilience & Architectural Extensibility (V2.1 Master Architecture) — Fault Tolerance, Emergent Innovation, & Governance
 
-[← Chapter 5: International Legal & Compliance Fortress](./05_legal_fortress_0yen.en.md) | [Back to Index](../../README.md)
+[← Chapter 5: International Legal & Compliance Fortress](./05_legal_fortress_0yen.en.md) | [Back to Index](../../../README.md)
 
 ## Overview & Purpose
 
@@ -196,12 +196,12 @@ $$
 
 * **Failure Modes:**
 
-  * Risk of local NOR Flash buffer overflow and packet loss if sensor fault detection thresholds lag during intermittent disconnects (See: [ISSUE-014](../../issues/SOMA_ISSUES_EN.md)).
+  * Risk of local NOR Flash buffer overflow and packet loss if sensor fault detection thresholds lag during intermittent disconnects (See: [ISSUE-014](../../../issues/SOMA_ISSUES_EN.md)).
 
-  * Adaptation lag in 7-day rolling vital baselines for residents experiencing acute environmental shifts or chronic medical conditions (See: [ISSUE-012](../../issues/SOMA_ISSUES_EN.md)).
+  * Adaptation lag in 7-day rolling vital baselines for residents experiencing acute environmental shifts or chronic medical conditions (See: [ISSUE-012](../../../issues/SOMA_ISSUES_EN.md)).
 
-  * Review queue congestion if Relief Oracle DAO voter turnout drops below quorum thresholds (See: [ISSUE-015](../../issues/SOMA_ISSUES_EN.md)).
+  * Review queue congestion if Relief Oracle DAO voter turnout drops below quorum thresholds (See: [ISSUE-015](../../../issues/SOMA_ISSUES_EN.md)).
 
 * **Verification / PoC Requirements:** Fault-tolerant distributed systems stress testing (NASA Safe-Mode benchmark) across combined network blackout, rapid battery depletion, and multi-sensor fault scenarios.
 
-[← Chapter 5: International Legal & Compliance Fortress](./05_legal_fortress_0yen.en.md) | [Back to Index](../../README.md)
+[← Chapter 5: International Legal & Compliance Fortress](./05_legal_fortress_0yen.en.md) | [Back to Index](../../../README.md)

@@ -1,6 +1,6 @@
 # 第4章 分散型トークノミクス＆金融エンジニアリング：R2S, CWE, 段階的ファクタリング, GPR
 
-[← 第3章 自律型B2B業務ギルド：SOMA Guild](./03_soma_guild_b2b.ja.md) | [目次に戻る](../../README.md) | [第5章 国際法務・コンプライアンス要塞 →](./05_legal_fortress_0yen.ja.md)
+[← 第3章 自律型B2B業務ギルド：SOMA Guild](./03_soma_guild_b2b.ja.md) | [目次に戻る](../../../README.md) | [第5章 国際法務・コンプライアンス要塞 →](./05_legal_fortress_0yen.ja.md)
 
 ## 概要と目的
 
@@ -44,7 +44,7 @@ R2S（Resource-to-Service）は、ユーザー（作業員・熟練職人・障�
 
 * **Worker / Individual Share ($\theta_{\text{worker}} \in [0.40, 0.50]$):** データ提供者・ギルド処理ワーカーの個人口座および R2S クレジットプールへ直行。
 * **Facility / Operator Share ($\theta_{\text{facility}} \in [0.40, 0.50]$):** センサー稼働拠点・住居管理法人・現場オペレーターのインフラ維持費へ配分。
-* **Platform Treasury Share ($\theta_{\text{platform}} \in [0.10, 0.20]$):** システム開発維持・保険ヘッジプール（0.1%積立）へ充当（$\theta_{\text{worker}} + \theta_{\text{facility}} + \theta_{\text{platform}} = 1.0$）。
+* **Platform Treasury Share ($\theta_{\text{platform}} \in [0.10, 0.20]$):** システム開発維持・保険ヘッジプール（0.1%積立）へ充当（ $\theta_{\text{worker}} + \theta_{\text{facility}} + \theta_{\text{platform}} = 1.0$ ）。
 
 また、第2章の「3ヶ月間報酬留保（Holdback）」期間中における困窮層のキャッシュフロー不足を補うため、信頼スコア（Trust Score）に応じた**段階的ファクタリング（将来債権の前借り）**を提供する。前借り枠には、将来発生する正常マイニング報酬およびギルド報酬に対する**自動留置権（Future Earnings Lien）**が設定され、万が一チート発覚や途中離脱が生じた場合は留保プールと将来債権から自動的に相殺（Clawback）される。
 
@@ -112,16 +112,16 @@ R2S（Resource-to-Service）は、ユーザー（作業員・熟練職人・障�
 
 | 行動選択 | 短期キャッシュフロー | 90日後の純累積利得 | システム安全性 |
 | :--- | :---: | :---: | :--- |
-| **クリーン採掘 ＋ 段階的前借り利用** | $+F_{\text{advance}}$（生活資金即時確保） | $+R_{\text{total}} - \phi_{\text{fee}} > 0$ | 留保プールから自動返済され信用スコア上昇 |
+| **クリーン採掘 ＋ 段階的前借り利用** | $+F_{\text{advance}}$ （生活資金即時確保） | $+R_{\text{total}} - \phi_{\text{fee}} > 0$ | 留保プールから自動返済され信用スコア上昇 |
 | **チート採掘 ＋ 前借り持ち逃げ企図** | $+F_{\text{advance}} - C_{\text{cheat}}$ | $-S_{\text{holdback}} - L_{\text{ban}} \ll 0$ | 前借り上限が既確定の留保残高未満に制限されるため持ち逃げ不能 |
 
-* **均衡条件:** ファクタリング貸付上限 $F_{\text{advance}}(t)$ は「すでに一次検証を通過しエスクローにロック済みの留保報酬残高 $S_{\text{locked}}(t)$ の一定掛け目（例: $\beta_{\text{LTV}} \le 0.50$）」に厳格制限されるため、無担保の持ち逃げ（貸倒れ）は数理的に発生しない。
+* **均衡条件:** ファクタリング貸付上限 $F_{\text{advance}}(t)$ は「すでに一次検証を通過しエスクローにロック済みの留保報酬残高 $S_{\text{locked}}(t)$ の一定掛け目（例: $\beta_{\text{LTV}} \le 0.50$ ）」に厳格制限されるため、無担保の持ち逃げ（貸倒れ）は数理的に発生しない。
 
 ### 3) Mathematical Formula
 
 #### 式 4.1: Context-Weighted Earn（文脈加重報酬）計算式
 
-PAIOS 採掘パケットの希少性・危険度・環境負荷を加味した実効報酬 $\text{Earn}_{\text{reward}}(t)$：
+PAIOS 採掘パケットの希少性・危険度・環境負荷を加味した実効報酬 $\text{Earn}_{\text{reward}}(t)$ ：
 
 $$
 \text{Earn}_{\text{reward}}(t) = R_{\text{base}} \cdot \text{PoU}_{\text{valid}}(t) \cdot \left( 1 + w_{\text{rare}} \cdot I_{\text{rarity}}(t) + w_{\text{env}} \cdot I_{\text{hazard}}(t) \right)
@@ -130,22 +130,22 @@ $$
 * $R_{\text{base}} > 0$: 単位時間あたりの基準マイニング単価
 * $\text{PoU}_{\text{valid}}(t) \in [0, 1]$: 第2章式 2.3 による生体・運動学妥当性スコア
 * $I_{\text{rarity}}(t) \in [0, 1]$: 動作パターンの新規性・未踏空間寄与度（VLAデータ希少性指数）
-* $I_{\text{hazard}}(t) \in [0, 1]$: 高所・極寒・狭隘空間などの物理環境負荷係数（$w_{\text{rare}}, w_{\text{env}} > 0$）
+* $I_{\text{hazard}}(t) \in [0, 1]$: 高所・極寒・狭隘空間などの物理環境負荷係数（ $w_{\text{rare}}, w_{\text{env}} > 0$ ）
 
-#### 式 4.2: R2S 現物還元レバレッジ倍率（$\text{Leverage}_{\text{R2S}}$）
+#### 式 4.2: R2S 現物還元レバレッジ倍率（ $\text{Leverage}_{\text{R2S}}$ ）
 
-ユーザーの実質購買力増幅率 $\text{Leverage}_{\text{R2S}} \ge 1.0$：
+ユーザーの実質購買力増幅率 $\text{Leverage}_{\text{R2S}} \ge 1.0$ ：
 
 $$
 \text{Leverage}_{\text{R2S}} = \frac{V_{\text{retail\_service}}}{\max\left( C_{\text{wholesale\_cost}}, \; \epsilon_C \right)}
 $$
 
 * $V_{\text{retail\_service}} > 0$: ユーザーへ提供される住居・電力・通信・食料の一般市場小売価値
-* $C_{\text{wholesale\_cost}} > 0$: プラットフォームのバルク調達・自社インフラ提供原価（$\epsilon_C = 10^{-6}$ はゼロ除算防止定数）
+* $C_{\text{wholesale\_cost}} > 0$: プラットフォームのバルク調達・自社インフラ提供原価（ $\epsilon_C = 10^{-6}$ はゼロ除算防止定数）
 
 #### 式 4.3: GPR インデックス（Global Purchasing Resilience Index）平準化式（ヘッジ上限クランプ版）
 
-地域 $r$・時刻 $t$ における名目報酬の購買力平準化係数 $\text{GPR}_{\text{index}}(r, t) \in [\text{GPR}_{\min}, \text{GPR}_{\max}]$：
+地域 $r$ ・時刻 $t$ における名目報酬の購買力平準化係数 $\text{GPR}_{\text{index}}(r, t) \in [\text{GPR}_{\min}, \text{GPR}_{\max}]$ ：
 
 $$
 \text{GPR}_{\text{raw}}(r, t) = w_{\text{bm}} \cdot \frac{\text{PPP}_{\text{BigMac}}(r, t)}{\text{PPP}_{\text{base}}} + w_{\text{cpi}} \cdot \frac{\text{CPI}_{\text{local}}(r, t)}{\text{CPI}_{\text{base}}} + w_{\text{fx}} \cdot \frac{\text{FX}_{\text{USD}}(r, t)}{\text{FX}_{\text{base}}}
@@ -155,7 +155,7 @@ $$
 \text{GPR}_{\text{index}}(r, t) = \text{clamp}_{[0.50, \; 2.50]}\left( \text{GPR}_{\text{raw}}(r, t) \right)
 $$
 
-* $w_{\text{bm}} + w_{\text{cpi}} + w_{\text{fx}} = 1.0$（標準重み: 食料購買力 $0.40$、現地CPI $0.40$、為替変動 $0.20$）
+* $w_{\text{bm}} + w_{\text{cpi}} + w_{\text{fx}} = 1.0$ （標準重み: 食料購買力 $0.40$ 、現地CPI $0.40$ 、為替変動 $0.20$ ）
 * $[0.50, \; 2.50]$: ハイパーインフレや通貨急落時に保険ヘッジプールが瞬時に枯渇するのを防ぐ上限・下限クランプ
 
 ### 4) Anti-Fragile Red-Teaming
@@ -171,8 +171,8 @@ $$
 
 * **前提条件（Assumptions）:** 本章の R2S 現物還元および即時3分割清算は、ステープルコインまたは法定通貨決済レール（API バンキング）が 24 時間稼働し、スマートコントラクトのオラクルと同期していることを前提とする。
 * **想定される破綻モード（Failure Modes）:**
-  * 極端な為替変動や複数国での同時インフレ発生時における $0.1\%$ 保険ヘッジプールの積立不足リスク（関連: [ISSUE-008](../../issues/SOMA_ISSUES_JP.md)）。
-  * 前払い・段階的ファクタリングにおける将来債権留置権（Lien）の各国労働法・賃金全額払いの原則との法的抵触（関連: [ISSUE-009](../../issues/SOMA_ISSUES_JP.md)）。
-* **監査・PoC検証要件:** 確率的為替ショックモデル（モンテカルロ・シミュレーション）を用いた保険ヘッジプール破産確率（$< 0.01\%$）のストレステスト。
+  * 極端な為替変動や複数国での同時インフレ発生時における $0.1\%$ 保険ヘッジプールの積立不足リスク（関連: [ISSUE-008](../../../issues/SOMA_ISSUES_JP.md)）。
+  * 前払い・段階的ファクタリングにおける将来債権留置権（Lien）の各国労働法・賃金全額払いの原則との法的抵触（関連: [ISSUE-009](../../../issues/SOMA_ISSUES_JP.md)）。
+* **監査・PoC検証要件:** 確率的為替ショックモデル（モンテカルロ・シミュレーション）を用いた保険ヘッジプール破産確率（ $< 0.01\%$ ）のストレステスト。
 
-[← 第3章 自律型B2B業務ギルド：SOMA Guild](./03_soma_guild_b2b.ja.md) | [目次に戻る](../../README.md) | [第5章 国際法務・コンプライアンス要塞 →](./05_legal_fortress_0yen.ja.md)
+[← 第3章 自律型B2B業務ギルド：SOMA Guild](./03_soma_guild_b2b.ja.md) | [目次に戻る](../../../README.md) | [第5章 国際法務・コンプライアンス要塞 →](./05_legal_fortress_0yen.ja.md)

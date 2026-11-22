@@ -1,10 +1,10 @@
 # 第7章 予測インデックス：The Pulse（失敗パルス）シグナルと市場防腐（v2.0）
 
-[← 第6章 ガバナンス防腐と国際法適合回路](./06_governance.ja.md) | [目次に戻る](../../README.md) | [第8章 法務・地政学・国際法規適合アーキテクチャ →](./08_legal_compliance.ja.md)
+[← 第6章 ガバナンス防腐と国際法適合回路](./06_governance.ja.md) | [目次に戻る](../../../README.md) | [第8章 法務・地政学・国際法規適合アーキテクチャ →](./08_legal_compliance.ja.md)
 
 ## 概要と目的
 
-本モジュールは、The Forge 内における失敗データの投稿流量（出来高）・発生密度・カテゴリー別トラフィックの変動をリアルタイム観測し、技術的ブレイクスルーの予兆（クエンチ）および物理的障壁（スパイク）を抽出する文明の予測ダッシュボード **The Pulse（失敗パルス）** の仕様を定義する。SNS バズによる偽スパイクや、成功隠蔽による人工クエンチ（投稿ストップ）を排除する「動的 Z スコア上限キャップ（$Z_i > 3.0$ 切り捨て）」および「SATORI トポロジー相転移監査」の防腐数理モデルを確定する。
+本モジュールは、The Forge 内における失敗データの投稿流量（出来高）・発生密度・カテゴリー別トラフィックの変動をリアルタイム観測し、技術的ブレイクスルーの予兆（クエンチ）および物理的障壁（スパイク）を抽出する文明の予測ダッシュボード **The Pulse（失敗パルス）** の仕様を定義する。SNS バズによる偽スパイクや、成功隠蔽による人工クエンチ（投稿ストップ）を排除する「動的 Z スコア上限キャップ（ $Z_i > 3.0$ 切り捨て）」および「SATORI トポロジー相転移監査」の防腐数理モデルを確定する。
 
 ## 7.1 文明のダッシュボードとリアルタイム予測アーキテクチャ
 
@@ -98,7 +98,7 @@ The Pulse のシグナルは株式・コモディティ・知財先物市場の�
 | **検知メカニズム** | $(\text{ROOTS}_i)^k$ 物理代償重み付け ＋ $Z \le 3.0$ クランプ | SATORI 位相収束スキャン $\Psi_{\text{topology}} < \theta_{\text{crit}}$ | 
 | **攻撃者の経済収支** | 莫大な電力・ステーキングコストのみ発生しシグナル不発（大赤字） | シグナル無効化 ＋ 第1章の内部告発バウンティで裏切られ破滅 | 
 
-物理的代償（$\text{ROOTS}_i$）と幾何学的位相収束（$\Psi_{\text{topology}}$）の二重検証により、実態を伴わない情報操作はコスト倒れとなり、市場予測インデックスの純度が維持される。
+物理的代償（ $\text{ROOTS}_i$ ）と幾何学的位相収束（ $\Psi_{\text{topology}}$ ）の二重検証により、実態を伴わない情報操作はコスト倒れとなり、市場予測インデックスの純度が維持される。
 
 ## 7.4 Mathematical Formula
 
@@ -106,23 +106,23 @@ ROOTS 加重実効出来高、動的 Z スコアクランプ、および真の�
 
 ### 式 7.1: ROOTS 物理代償加重実効出来高（Noise-Filtered Volume）
 
-セクター $s$ の時間ウィンドウ $t$ における実効失敗エネルギー出来高 $V_{\text{eff}}(s, t)$：
+セクター $s$ の時間ウィンドウ $t$ における実効失敗エネルギー出来高 $V_{\text{eff}}(s, t)$ ：
 
 $$
 V_{\text{eff}}(s, t) = \sum_{i \in \mathcal{D}_{s, t}} C_{\text{phys}}(i) \cdot (\text{ROOTS}_i)^k \cdot \left( 1 + \text{SC}_i \right)
 $$
 
-* $\mathcal{D}_{s, t}$: セクター $s$・ウィンドウ $t$ 内に到達した失敗データ集合
+* $\mathcal{D}_{s, t}$: セクター $s$ ・ウィンドウ $t$ 内に到達した失敗データ集合
 
 * $C_{\text{phys}}(i) \ge 0$: $i$ 番目の実験が消費した物理コスト
 
-* $\text{ROOTS}_i \in [0, 1]$: 物理実存証明スコア（$k = 3$ により低信頼・SNS バズ系ゴミデータを指数減衰）
+* $\text{ROOTS}_i \in [0, 1]$: 物理実存証明スコア（ $k = 3$ により低信頼・SNS バズ系ゴミデータを指数減衰）
 
 * $\text{SC}_i \ge 0$: ショートカット可能性指数
 
 ### 式 7.2: 動的 Z スコア上限キャップ（人工スパイク遮断式）
 
-移動平均 $\mu_V(s, t)$ および移動標準偏差 $\sigma_V(s, t)$ に基づく外れ値クランプ済 Z スコア $Z_{\text{clamped}}(s, t) \in [-Z_{\text{max}}, Z_{\text{max}}]$：
+移動平均 $\mu_V(s, t)$ および移動標準偏差 $\sigma_V(s, t)$ に基づく外れ値クランプ済 Z スコア $Z_{\text{clamped}}(s, t) \in [-Z_{\text{max}}, Z_{\text{max}}]$ ：
 
 $$
 Z_{\text{raw}}(s, t) = \frac{V_{\text{eff}}(s, t) - \mu_V(s, t)}{\max\left( \sigma_V(s, t), \; \epsilon_{\sigma} \right)}, \quad Z_{\text{clamped}}(s, t) = \text{clamp}_{[-3.0, 3.0]}\left( Z_{\text{raw}}(s, t) \right)
@@ -134,17 +134,17 @@ $$
 
 ### 式 7.3: 真の市場予測シグナル $P_{\text{signal}}(s, t)$ 算定式（偽クエンチ排除版）
 
-失敗出来高の変動（$Z_{\text{clamped}}$）と SATORI 位相幾何学収束度（$\Psi_{\text{topology}} \in [0, 1]$）を統合した正規化予測シグナル $P_{\text{signal}}(s, t) \in [-1, 1]$：
+失敗出来高の変動（ $Z_{\text{clamped}}$ ）と SATORI 位相幾何学収束度（ $\Psi_{\text{topology}} \in [0, 1]$ ）を統合した正規化予測シグナル $P_{\text{signal}}(s, t) \in [-1, 1]$ ：
 
 $$
 P_{\text{signal}}(s, t) = \tanh\left( \alpha_1 \cdot Z_{\text{clamped}}(s, t) - \alpha_2 \cdot \mathbb{I}\left( Z_{\text{clamped}}(s, t) < -\theta_Z \right) \cdot \Psi_{\text{topology}}(s, t) \right)
 $$
 
-* $\Psi_{\text{topology}}(s, t) \in [0, 1]$: SATORI 多様体空間における失敗包囲率 $S_{\text{rate}}$ の収束度（$S_{\text{rate}} \ge 0.99$ 近傍で $1.0$ に漸近）
+* $\Psi_{\text{topology}}(s, t) \in [0, 1]$: SATORI 多様体空間における失敗包囲率 $S_{\text{rate}}$ の収束度（ $S_{\text{rate}} \ge 0.99$ 近傍で $1.0$ に漸近）
 
 * $\theta_Z = 1.5$: クエンチ（投稿急減）判定閾値
 
-* $\mathbb{I}(\cdot) \in \{0, 1\}$: 指示関数。投稿量が急減しても多様体が未飽和（$\Psi_{\text{topology}} \approx 0$）であれば「単なる予算切れ・隠蔽工作（偽クエンチ）」と判定し、ブレイクスルーシグナルを発火させない。
+* $\mathbb{I}(\cdot) \in \{0, 1\}$: 指示関数。投稿量が急減しても多様体が未飽和（ $\Psi_{\text{topology}} \approx 0$ ）であれば「単なる予算切れ・隠蔽工作（偽クエンチ）」と判定し、ブレイクスルーシグナルを発火させない。
 
 * $\alpha_1, \alpha_2 > 0$: シグナル感度重み係数（正値で技術的壁スパイク、負値で真のブレイクスルー予兆を表現）
 
@@ -170,10 +170,10 @@ The Pulse に対して想定される市場操作・統計攻撃ベクトルと�
 
 * **想定される破綻モード（Failure Modes）:**
 
-  * SNS バズワードに誘発された低品質ログの大量流入による「技術的壁」誤検知リスク（関連: [ISSUE-023](../../issues/FORGE_ISSUES_JP.md)）。
+  * SNS バズワードに誘発された低品質ログの大量流入による「技術的壁」誤検知リスク（関連: [ISSUE-023](../../../issues/FORGE_ISSUES_JP.md)）。
 
-  * 業界全体の研究開発放棄（撤退）と真の技術的ブレイクスルー（クエンチ）の統計的識別境界の曖昧性（関連: [ISSUE-024](../../issues/FORGE_ISSUES_JP.md)）。
+  * 業界全体の研究開発放棄（撤退）と真の技術的ブレイクスルー（クエンチ）の統計的識別境界の曖昧性（関連: [ISSUE-024](../../../issues/FORGE_ISSUES_JP.md)）。
 
 * **監査・PoC検証要件:** 過去の特許出願急増期・技術ブレイクスルーデータセットを用いた $P_{\text{signal}}(s, t)$ の先行指標性（Granger 因果性検定）バックテスト。
 
-[← 第6章 ガバナンス防腐と国際法適合回路](./06_governance.ja.md) | [目次に戻る](../../README.md) | [第8章 法務・地政学・国際法規適合アーキテクチャ →](./08_legal_compliance.ja.md)
+[← 第6章 ガバナンス防腐と国際法適合回路](./06_governance.ja.md) | [目次に戻る](../../../README.md) | [第8章 法務・地政学・国際法規適合アーキテクチャ →](./08_legal_compliance.ja.md)

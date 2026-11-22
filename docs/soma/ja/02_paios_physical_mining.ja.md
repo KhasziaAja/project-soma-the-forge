@@ -1,6 +1,6 @@
 # 第2章 物理・エッジセンシング層：PAIOS（Physical-AI OS）データマイニングとハードウェア要塞
 
-[← 第1章 総論・存在の価値化](./01_system_topology.ja.md) | [目次に戻る](../../README.md) | [第3章 自律型B2B業務ギルド：SOMA Guild →](./03_soma_guild_b2b.ja.md)
+[← 第1章 総論・存在の価値化](./01_system_topology.ja.md) | [目次に戻る](../../../README.md) | [第3章 自律型B2B業務ギルド：SOMA Guild →](./03_soma_guild_b2b.ja.md)
 
 ## 概要と目的
 
@@ -114,8 +114,8 @@ PAIOS による物理動態マイニングの成否は、作業員および居�
 
 | | 検証プロトコル: 正常認証（90日後に報酬解放） | 検証プロトコル: ポイズニング検知（即時 Slashing） |
 | :--- | :---: | :---: |
-| **マイナー: 正当装着・日常稼働** | $(+R_{\text{mining}} + R_{\text{R2S}} - C_{\text{wear}}, \; +V_{\text{DaaS}})$ | $(0, \; 0)$（誤検知率は極小） |
-| **マイナー: 機械振動・チート工作** | $(0, \; 0)$（PoU V2.1 により通過確率 $\approx 0$） | $(-S_{\text{holdback}} - C_{\text{cheat}}, \; +\text{SlashedPool})$ |
+| **マイナー: 正当装着・日常稼働** | $(+R_{\text{mining}} + R_{\text{R2S}} - C_{\text{wear}}, \; +V_{\text{DaaS}})$ | $(0, \; 0)$ （誤検知率は極小） |
+| **マイナー: 機械振動・チート工作** | $(0, \; 0)$ （PoU V2.1 により通過確率 $\approx 0$ ） | $(-S_{\text{holdback}} - C_{\text{cheat}}, \; +\text{SlashedPool})$ |
 
 * **均衡条件:** 報酬の 3 ヶ月間ロック（Holdback）期間中に複数回（オフライン時系列クロスチェック含む）の逆解析監査が走るため、一時的にセンサーを騙せたとしても 90 日以内に発覚し、蓄積された留保報酬 $S_{\text{holdback}}$ が全額没収される。よって、正規装着して日常動作を行うことが唯一の厳密支配戦略となる。
 
@@ -129,31 +129,31 @@ $$F(n) = \sqrt{\frac{1}{N} \sum_{i=1}^{N} \left( Y(i) - Y_n(i) \right)^2} \propt
 
 $$\alpha = \frac{\Delta \ln F(n)}{\Delta \ln n}, \quad \mathbb{I}_{\text{DFA}}(\alpha) = \begin{cases} 1 & \text{if } 0.75 < \alpha < 1.25 \\ 0 & \text{otherwise} \end{cases}$$
 
-* 人工的なピンクノイズ生成器や単調な機械振動（洗濯機・マッサージチェア等）はホワイトノイズ（$\alpha \approx 0.50$）またはブラウン運動（$\alpha \ge 1.50$）へ偏るため、生体自律神経特有の $1/f$ カオス領域（$0.75 < \alpha < 1.25$）から逸脱し即座に排除される。
+* 人工的なピンクノイズ生成器や単調な機械振動（洗濯機・マッサージチェア等）はホワイトノイズ（ $\alpha \approx 0.50$ ）またはブラウン運動（ $\alpha \ge 1.50$ ）へ偏るため、生体自律神経特有の $1/f$ カオス領域（ $0.75 < \alpha < 1.25$ ）から逸脱し即座に排除される。
 
 #### 式 2.2: 筋伝導応答遅延（Electromechanical Delay: EMD）判定式
 
-大脳運動野からの随意指令（表面筋電図 EMG 立上がり時刻 $t_{\text{EMG}}$）と、実際の筋体積変化・筋脈波立上がり時刻 $t_{\text{mech}}$ の生理学的位相差 $T_{\text{rise}}$：
+大脳運動野からの随意指令（表面筋電図 EMG 立上がり時刻 $t_{\text{EMG}}$ ）と、実際の筋体積変化・筋脈波立上がり時刻 $t_{\text{mech}}$ の生理学的位相差 $T_{\text{rise}}$ ：
 
 $$T_{\text{rise}} = t_{\text{mech}} - t_{\text{EMG}}, \quad \mathbb{I}_{\text{EMD}}(T_{\text{rise}}) = \begin{cases} 1 & \text{if } 80\text{ ms} \le T_{\text{rise}} \le 120\text{ ms} \\ 0 & \text{otherwise} \end{cases}$$
 
-* 低周波治療器（EMS）や外部からの機械的圧迫・振動では、物理変位が先行（$T_{\text{rise}} \le 0$）するか、神経伝達経路を経由しないため $80\text{--}120\text{ ms}$ の生理的遅延ウィンドウから外れ、受動的モーション（Passive Motion）として無効化される。
+* 低周波治療器（EMS）や外部からの機械的圧迫・振動では、物理変位が先行（ $T_{\text{rise}} \le 0$ ）するか、神経伝達経路を経由しないため $80\text{--}120\text{ ms}$ の生理的遅延ウィンドウから外れ、受動的モーション（Passive Motion）として無効化される。
 
 #### 式 2.3: PoU V2.1 総合妥当性判定関数（統合スコア式）
 
-上記物理・生理指標および床反力・IMU 運動学整合度 $S_{\text{kin}} \in [0, 1]$ を結合したパケット有効性判定スコア $\text{PoU}_{\text{valid}}(t) \in [0, 1]$：
+上記物理・生理指標および床反力・IMU 運動学整合度 $S_{\text{kin}} \in [0, 1]$ を結合したパケット有効性判定スコア $\text{PoU}_{\text{valid}}(t) \in [0, 1]$ ：
 
 $$\text{PoU}_{\text{valid}}(t) = \mathbb{I}_{\text{PUF}} \cdot \mathbb{I}_{\text{DFA}}(\alpha) \cdot \mathbb{I}_{\text{EMD}}(T_{\text{rise}}) \cdot \text{clamp}_{[0, 1]}\left( w_{\text{kin}} \cdot S_{\text{kin}}(t) + w_{\text{bio}} \cdot \exp\left( -\lambda_{\alpha} |\alpha - 1.0| - \lambda_{T} \frac{|T_{\text{rise}} - 100|}{20} \right) \right)$$
 
 * $\mathbb{I}_{\text{PUF}} \in \{0, 1\}$: SoC Hardware Enclave 署名検証フラグ
-* $w_{\text{kin}} + w_{\text{bio}} = 1.0$（標準値: $w_{\text{kin}} = 0.40, \; w_{\text{bio}} = 0.60$）、$\lambda_{\alpha} = 2.0, \; \lambda_{T} = 1.0$
+* $w_{\text{kin}} + w_{\text{bio}} = 1.0$ （標準値: $w_{\text{kin}} = 0.40, \; w_{\text{bio}} = 0.60$ ）、 $\lambda_{\alpha} = 2.0, \; \lambda_{T} = 1.0$
 * 判定閾値 $\text{PoU}_{\text{valid}}(t) \ge 0.80$ を満たすパケットのみが VLA トレーニングデータとして採択され、R2S クレジットを発行する。
 
 ### 4) Anti-Fragile Red-Teaming
 
 1. **攻撃ベクトル 2-A: 洗濯機・EMS・サーボロボットによる物理擬態チート攻撃（Mechanical Spoofing Attack）**
    * **手法:** センサーを洗濯機、マッサージ機、あるいはプログラムされたロボットアームに装着し、人間の労働動作を偽装して大量マイニングしようとする。
-   * **防御弁:** 式 2.1（DFA カオス指数 $\alpha \in (0.75, 1.25)$）と式 2.2（EMG 先行遅延 $T_{\text{rise}} \in [80, 120]\text{ ms}$）の二重物理ロックにより、周期的機械振動および外部電気刺激（EMS）は $100\%$ 排除される。さらに 3 ヶ月間の Holdback 期間中に時系列全体の歩容・姿勢エントロピー監査が実行され、異常検知時は累積報酬が全額没収される。
+   * **防御弁:** 式 2.1（DFA カオス指数 $\alpha \in (0.75, 1.25)$ ）と式 2.2（EMG 先行遅延 $T_{\text{rise}} \in [80, 120]\text{ ms}$ ）の二重物理ロックにより、周期的機械振動および外部電気刺激（EMS）は $100\%$ 排除される。さらに 3 ヶ月間の Holdback 期間中に時系列全体の歩容・姿勢エントロピー監査が実行され、異常検知時は累積報酬が全額没収される。
 2. **攻撃ベクトル 2-B: 基板プロービングによる生データ改ざん注入攻撃（Hardware Interposer Attack）**
    * **手法:** ウェアラブル端末を分解し、センサーとマイコン間の通信線に偽造データ生成器を割り込ませる。
    * **防御弁:** センサー素子と TPM/PUF 暗号コアを同一シリコンダイ（SoC Enclave）内に封止し、外部バスへの平文出力を物理的に廃止しているため、プロービングによる信号注入は物理的に不可能である。
@@ -162,8 +162,8 @@ $$\text{PoU}_{\text{valid}}(t) = \mathbb{I}_{\text{PUF}} \cdot \mathbb{I}_{\text
 
 * **前提条件（Assumptions）:** 本章の EMD（筋伝導遅延）判定は、対象ユーザーが重度の神経筋疾患やペースメーカー装着者ではなく、標準的な神経-筋伝達系を有していることを前提とする（該当者向けには福祉免除プロファイルが適用される）。
 * **想定される破綻モード（Failure Modes）:**
-  * 極端な発汗・皮膚乾燥・体毛による首裏パッチの EMG 電極インピーダンス上昇に伴う信号欠損（関連: [ISSUE-002](../../issues/SOMA_ISSUES_JP.md)）。
-  * 激しい現場作業時のモーションアーチファクトによる DFA $\alpha$ 値の一時的ドリフト（関連: [ISSUE-003](../../issues/SOMA_ISSUES_JP.md)）。
-* **監査・PoC検証要件:** 実機 SoC プロトタイプを用いた 100 名規模のフィールド試験における偽陽性率（誤拒絶率 FRR $< 1.5\%$）および偽陰性率（チート突破率 FAR $< 0.01\%$）の実測検証。
+  * 極端な発汗・皮膚乾燥・体毛による首裏パッチの EMG 電極インピーダンス上昇に伴う信号欠損（関連: [ISSUE-002](../../../issues/SOMA_ISSUES_JP.md)）。
+  * 激しい現場作業時のモーションアーチファクトによる DFA $\alpha$ 値の一時的ドリフト（関連: [ISSUE-003](../../../issues/SOMA_ISSUES_JP.md)）。
+* **監査・PoC検証要件:** 実機 SoC プロトタイプを用いた 100 名規模のフィールド試験における偽陽性率（誤拒絶率 FRR $< 1.5\%$ ）および偽陰性率（チート突破率 FAR $< 0.01\%$ ）の実測検証。
 
-[← 第1章 総論・存在の価値化](./01_system_topology.ja.md) | [目次に戻る](../../README.md) | [第3章 自律型B2B業務ギルド：SOMA Guild →](./03_soma_guild_b2b.ja.md)
+[← 第1章 総論・存在の価値化](./01_system_topology.ja.md) | [目次に戻る](../../../README.md) | [第3章 自律型B2B業務ギルド：SOMA Guild →](./03_soma_guild_b2b.ja.md)

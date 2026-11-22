@@ -1,6 +1,6 @@
 # Chapter 3: Autonomous B2B Task Guild — SOMA Guild 24/7 Asynchronous Relay & "Negative IP" Recycling
 
-[← Chapter 2: PAIOS Physical & Edge Sensing Layer](./02_paios_physical_mining.en.md) | [Back to Index](../../README.md) | [Chapter 4: Decentralized Tokenomics & Financial Engineering →](./04_tokenomics_finance.en.md)
+[← Chapter 2: PAIOS Physical & Edge Sensing Layer](./02_paios_physical_mining.en.md) | [Back to Index](../../../README.md) | [Chapter 4: Decentralized Tokenomics & Financial Engineering →](./04_tokenomics_finance.en.md)
 
 ## Overview & Purpose
 
@@ -292,10 +292,10 @@ $$
 
 * **Failure Modes:**
 
-  * Context fragmentation when decomposing tightly coupled legacy systems into 15–30 minute micro-chunks ($\Phi$) (See: [ISSUE-004](../../issues/SOMA_ISSUES_EN.md)).
+  * Context fragmentation when decomposing tightly coupled legacy systems into 15–30 minute micro-chunks ($\Phi$) (See: [ISSUE-004](../../../issues/SOMA_ISSUES_EN.md)).
 
-  * Risk of Engine A welfare recipients inadvertently crossing statutory income ceilings ("Benefit Cliff") during rapid task completion without automated income-cap locks (See: [ISSUE-007](../../issues/SOMA_ISSUES_EN.md)).
+  * Risk of Engine A welfare recipients inadvertently crossing statutory income ceilings ("Benefit Cliff") during rapid task completion without automated income-cap locks (See: [ISSUE-007](../../../issues/SOMA_ISSUES_EN.md)).
 
 * **Verification / PoC Requirements:** Benchmark integration-test pass rates and deadline adherence across post-decomposition enterprise legacy refactoring contracts.
 
-[← Chapter 2: PAIOS Physical & Edge Sensing Layer](./02_paios_physical_mining.en.md) | [Back to Index](../../README.md) | [Chapter 4: Decentralized Tokenomics & Financial Engineering →](./04_tokenomics_finance.en.md)
+[← Chapter 2: PAIOS Physical & Edge Sensing Layer](./02_paios_physical_mining.en.md) | [Back to Index](../../../README.md) | [Chapter 4: Decentralized Tokenomics & Financial Engineering →](./04_tokenomics_finance.en.md)

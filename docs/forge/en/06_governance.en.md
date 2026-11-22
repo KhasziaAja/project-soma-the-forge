@@ -1,6 +1,6 @@
 # Chapter 6 Governance Anti-Corruptibility and International Compliance Circuit: EU-Compliant 4-Phase Protocol
 
-[← Chapter 5 Integrated Development Model: D&A & Dynamic Royalty](./05_d_and_a_model.en.md) | [Back to Index](../../README.md) | [Chapter 7 Predictive Index: The Pulse →](./07_the_pulse.en.md)
+[← Chapter 5 Integrated Development Model: D&A & Dynamic Royalty](./05_d_and_a_model.en.md) | [Back to Index](../../../README.md) | [Chapter 7 Predictive Index: The Pulse →](./07_the_pulse.en.md)
 
 ## Overview & Purpose
 
@@ -159,12 +159,12 @@ We present anticipated legal and political attack vectors against the governance
 
 * **Failure Modes:**
 
-  * Risk of unintended activation of IP-freeze "Scorched Earth" protocols caused by oracle misclassification during corporate M&A or restructuring (See: [ISSUE-027](../../issues/FORGE_ISSUES_EN.md)).
+  * Risk of unintended activation of IP-freeze "Scorched Earth" protocols caused by oracle misclassification during corporate M&A or restructuring (See: [ISSUE-027](../../../issues/FORGE_ISSUES_EN.md)).
 
-  * Priority disputes among secured creditors (VCs, commercial banks) and the platform over liquidation proceeds from bankrupt startup failure logs (See: [ISSUE-028](../../issues/FORGE_ISSUES_EN.md)).
+  * Priority disputes among secured creditors (VCs, commercial banks) and the platform over liquidation proceeds from bankrupt startup failure logs (See: [ISSUE-028](../../../issues/FORGE_ISSUES_EN.md)).
 
-  * DAO governance gridlock (failure to reach voting quorum) during licensing updates or legal enforcement of fractionalized IP tokens (See: [ISSUE-029](../../issues/FORGE_ISSUES_EN.md)).
+  * DAO governance gridlock (failure to reach voting quorum) during licensing updates or legal enforcement of fractionalized IP tokens (See: [ISSUE-029](../../../issues/FORGE_ISSUES_EN.md)).
 
 * **Verification / PoC Requirements:** Legal compliance review against EU AI Act Article 14 (Human Oversight) and GDPR Article 22 (Right to contest automated individual decision-making).
 
-[← Chapter 5 Integrated Development Model: D&A & Dynamic Royalty](./05_d_and_a_model.en.md) | [Back to Index](../../README.md) | [Chapter 7 Predictive Index: The Pulse →](./07_the_pulse.en.md)
+[← Chapter 5 Integrated Development Model: D&A & Dynamic Royalty](./05_d_and_a_model.en.md) | [Back to Index](../../../README.md) | [Chapter 7 Predictive Index: The Pulse →](./07_the_pulse.en.md)

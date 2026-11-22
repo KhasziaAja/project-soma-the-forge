@@ -1,6 +1,6 @@
 # Chapter 1 System Overview: Intelligent Finance Market and Anti-Fragile Architecture
 
-[← Back to Index](../../README.md) | [Chapter 2 SATORI Complementary Space Phase Transition & ZKP →](./02_satori_zkp.en.md)
+[← Back to Index](../../../README.md) | [Chapter 2 SATORI Complementary Space Phase Transition & ZKP →](./02_satori_zkp.en.md)
 
 ## Overview & Purpose
 
@@ -147,8 +147,8 @@ We present anticipated attack vectors against this chapter's architecture along 
 
 * **Assumptions:** The game-theoretic equilibrium in this chapter assumes multiple internal stakeholders ($n_{\text{insider}} \ge 2$) and that on-chain bounty escrows remain isolated from asset seizures in traditional jurisdictions.
 * **Failure Modes:**
-  * Absence of automated clawback APIs against traditional non-CBDC bank accounts for royalty/penalty enforcement (See: [ISSUE-022](../../issues/FORGE_ISSUES_EN.md)).
-  * Local device concealment by internal R&D teams to evade automated duplicate-investment warnings (See: [ISSUE-020](../../issues/FORGE_ISSUES_EN.md)).
+  * Absence of automated clawback APIs against traditional non-CBDC bank accounts for royalty/penalty enforcement (See: [ISSUE-022](../../../issues/FORGE_ISSUES_EN.md)).
+  * Local device concealment by internal R&D teams to evade automated duplicate-investment warnings (See: [ISSUE-020](../../../issues/FORGE_ISSUES_EN.md)).
 * **Verification / PoC Requirements:** Multi-agent simulation validating Nash equilibrium convergence speed under varying $n_{\text{insider}}$ densities.
 
-[← Back to Index](../../README.md) | [Chapter 2 SATORI Complementary Space Phase Transition & ZKP →](./02_satori_zkp.en.md)
+[← Back to Index](../../../README.md) | [Chapter 2 SATORI Complementary Space Phase Transition & ZKP →](./02_satori_zkp.en.md)

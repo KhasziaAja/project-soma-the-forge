@@ -1,6 +1,6 @@
 # Chapter 4 Economic & Tokenomics Mathematics: D-LOG Protocol and 3-Axis Dynamic Boundaries (v2.0)
 
-[← Chapter 3 Proof-of-Trust Layer: ROOTS & TFA](./03_proof_of_trust.en.md) | [Back to Index](../../README.md) | [Chapter 5 Integrated Development Model: D&A & Dynamic Royalty →](./05_d_and_a_model.en.md)
+[← Chapter 3 Proof-of-Trust Layer: ROOTS & TFA](./03_proof_of_trust.en.md) | [Back to Index](../../../README.md) | [Chapter 5 Integrated Development Model: D&A & Dynamic Royalty →](./05_d_and_a_model.en.md)
 
 ## Overview & Purpose
 
@@ -130,10 +130,10 @@ We present anticipated economic and market attack vectors against the D-LOG prot
 
 * **Assumptions:** The tokenomics in this chapter assume that on-chain oracles reliably supply tamper-proof Tier transition timestamps and ZKP progress hash verification results to smart contracts.
 * **Failure Modes:**
-  * Risk of a "Market for Lemons & Liquidity Death Spiral" in Tier 3 (C2C flea market) caused by excessive inflows of low-quality data (See: [ISSUE-014](../../issues/FORGE_ISSUES_EN.md)).
-  * Premature time-decay (floor-price collapse) in niche materials and drug-discovery sectors requiring multi-year R&D cycles (See: [ISSUE-011](../../issues/FORGE_ISSUES_EN.md)).
-  * L1/L2 gas fee inversion risk on ultra-granular micro-access transactions (e.g., sub-cent pricing) (See: [ISSUE-013](../../issues/FORGE_ISSUES_EN.md)).
-  * Foundation treasury stagnation risk triggered by Floor-Price Buy-back guarantees in minor sectors (See: [ISSUE-015](../../issues/FORGE_ISSUES_EN.md)).
+  * Risk of a "Market for Lemons & Liquidity Death Spiral" in Tier 3 (C2C flea market) caused by excessive inflows of low-quality data (See: [ISSUE-014](../../../issues/FORGE_ISSUES_EN.md)).
+  * Premature time-decay (floor-price collapse) in niche materials and drug-discovery sectors requiring multi-year R&D cycles (See: [ISSUE-011](../../../issues/FORGE_ISSUES_EN.md)).
+  * L1/L2 gas fee inversion risk on ultra-granular micro-access transactions (e.g., sub-cent pricing) (See: [ISSUE-013](../../../issues/FORGE_ISSUES_EN.md)).
+  * Foundation treasury stagnation risk triggered by Floor-Price Buy-back guarantees in minor sectors (See: [ISSUE-015](../../../issues/FORGE_ISSUES_EN.md)).
 * **Verification / PoC Requirements:** Agent-based economic simulation (cadCAD) stress-testing $R_{\text{burn}}(t)$ convergence stability during supply spikes.
 
-[← Chapter 3 Proof-of-Trust Layer: ROOTS & TFA](./03_proof_of_trust.en.md) | [Back to Index](../../README.md) | [Chapter 5 Integrated Development Model: D&A & Dynamic Royalty →](./05_d_and_a_model.en.md)
+[← Chapter 3 Proof-of-Trust Layer: ROOTS & TFA](./03_proof_of_trust.en.md) | [Back to Index](../../../README.md) | [Chapter 5 Integrated Development Model: D&A & Dynamic Royalty →](./05_d_and_a_model.en.md)

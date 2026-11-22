@@ -1,6 +1,6 @@
 # 第1章 システム総論：知能金融（Intelligent Finance）市場とアンチフラジャイル設計
 
-[← 目次に戻る](../../README.md) | [第2章 SATORI補空間相転移とZKP文脈剥離 →](./02_satori_zkp.ja.md)
+[← 目次に戻る](../../../README.md) | [第2章 SATORI補空間相転移とZKP文脈剥離 →](./02_satori_zkp.ja.md)
 
 ---
 
@@ -82,7 +82,7 @@
 
 MICE（Money, Ideology, Compromise, Ego）フレームワークおよび Prospect Theory（プロスペクト理論）に基づく内部告発・成功隠蔽攻撃対抗のゲーム理論的利得構造（Payoff Matrix）を構築する。
 
-組織内部者 $A$ および $B$ が存在するとき、ブラックボックス成功隠蔽に対する利得（懸賞金 $R_{\text{bounty}}$ vs 企業の口止め料 $C_{\text{bribe}}$）の構造は以下の通り定義される。
+組織内部者 $A$ および $B$ が存在するとき、ブラックボックス成功隠蔽に対する利得（懸賞金 $R_{\text{bounty}}$ vs 企業の口止め料 $C_{\text{bribe}}$ ）の構造は以下の通り定義される。
 
 | | 内部者 B: 告発する（裏切り） | 内部者 B: 沈黙する（協調） |
 | :--- | :---: | :---: |
@@ -106,18 +106,18 @@ MICE（Money, Ideology, Compromise, Ego）フレームワークおよび Prospec
 
 $$V_{\text{system}}(t) = V_0 + \gamma \sum_{i=1}^{N_{\text{fail}}(t)} \left( \text{ROOTS}_i \cdot \text{SC}_i \right)^{\eta} - \sum_{j=1}^{M_{\text{leak}}(t)} L_{\text{risk}, j}$$
 
-* $V_0$: 初期基本資本量（$V_0 > 0$）
-* $N_{\text{fail}}(t)$: 時刻 $t$ における累積確定失敗データ数（$N_{\text{fail}}(t) \in \mathbb{Z}_{\ge 0}$）
-* $\text{ROOTS}_i$: $i$ 番目の失敗データの物理実存証明スコア（$0.0 \le \text{ROOTS}_i \le 1.0$）
-* $\text{SC}_i$: AI が算出した $i$ 番目の失敗データのショートカット可能性指数（削減可能開発コスト $\times$ 開発期間、$\text{SC}_i \ge 0.0$）
-* $\eta$: アンチフラジャイル増幅係数（$\eta > 1.0$、本仕様では $\eta = 1.25$ に固定）
-* $\gamma$: プラットフォーム網羅性スケーリング定数（$\gamma > 0$）
-* $M_{\text{leak}}(t)$: 情報漏洩インシデント数（$M_{\text{leak}}(t) \in \mathbb{Z}_{\ge 0}$）
-* $L_{\text{risk}, j}$: 情報漏洩に伴う損失額（$L_{\text{risk}, j} \ge 0$）
+* $V_0$: 初期基本資本量（ $V_0 > 0$ ）
+* $N_{\text{fail}}(t)$: 時刻 $t$ における累積確定失敗データ数（ $N_{\text{fail}}(t) \in \mathbb{Z}_{\ge 0}$ ）
+* $\text{ROOTS}_i$: $i$ 番目の失敗データの物理実存証明スコア（ $0.0 \le \text{ROOTS}_i \le 1.0$ ）
+* $\text{SC}_i$: AI が算出した $i$ 番目の失敗データのショートカット可能性指数（削減可能開発コスト $\times$ 開発期間、 $\text{SC}_i \ge 0.0$ ）
+* $\eta$: アンチフラジャイル増幅係数（ $\eta > 1.0$ 、本仕様では $\eta = 1.25$ に固定）
+* $\gamma$: プラットフォーム網羅性スケーリング定数（ $\gamma > 0$ ）
+* $M_{\text{leak}}(t)$: 情報漏洩インシデント数（ $M_{\text{leak}}(t) \in \mathbb{Z}_{\ge 0}$ ）
+* $L_{\text{risk}, j}$: 情報漏洩に伴う損失額（ $L_{\text{risk}, j} \ge 0$ ）
 
 ### 式 1.2: Prospect Theory 損失回避タイマーモデル
 
-告発猶予期間 $t \in [0, T_{\text{max}}]$ における内部通報者の主観的効用関数 $U_{\text{whistle}}(t)$：
+告発猶予期間 $t \in [0, T_{\text{max}}]$ における内部通報者の主観的効用関数 $U_{\text{whistle}}(t)$ ：
 
 $$U_{\text{whistle}}(t) = v(R_{\text{bounty}}) \cdot w(p_{\text{win}}(t)) - \lambda \cdot \left| v(-P_{\text{loss}}) \right| \cdot w(1 - p_{\text{win}}(t))$$
 
@@ -125,13 +125,13 @@ $$p_{\text{win}}(t) = \exp\left( -k_{\text{rival}} \cdot n_{\text{insider}} \cdo
 
 $$v(x) = \begin{cases} x^\alpha & (x \ge 0) \\ -\lambda (-x)^\beta & (x < 0) \end{cases}, \quad w(p) = \frac{p^\gamma}{\left(p^\gamma + (1 - p)^\gamma\right)^{1/\gamma}}$$
 
-* $\lambda$: 損失回避係数（$\lambda \approx 2.25$）
-* $\alpha, \beta$: 危険態度係数（$\alpha = \beta = 0.88$）
-* $\gamma$: 確率加重曲率パラメータ（標準値 $\gamma \approx 0.65$）
-* $P_{\text{loss}}$: 告発に遅れた場合の機会損失および法的・組織的ペナルティ相当額（$P_{\text{loss}} \equiv P_{\text{penalty}} > 0$）
-* $p_{\text{win}}(t)$: 時間 $t$ において自らが第 $1$ 通報者であり続ける確率（$p_{\text{win}}(t) \in (0, 1]$）
-* $k_{\text{rival}}$: 社内裏切り感度パラメーター（$k_{\text{rival}} > 0$）
-* $n_{\text{insider}}$: 成功隠蔽の事実を知る社内関係者の推定人数（$n_{\text{insider}} \ge 1$）
+* $\lambda$: 損失回避係数（ $\lambda \approx 2.25$ ）
+* $\alpha, \beta$: 危険態度係数（ $\alpha = \beta = 0.88$ ）
+* $\gamma$: 確率加重曲率パラメータ（標準値 $\gamma \approx 0.65$ ）
+* $P_{\text{loss}}$: 告発に遅れた場合の機会損失および法的・組織的ペナルティ相当額（ $P_{\text{loss}} \equiv P_{\text{penalty}} > 0$ ）
+* $p_{\text{win}}(t)$: 時間 $t$ において自らが第 $1$ 通報者であり続ける確率（ $p_{\text{win}}(t) \in (0, 1]$ ）
+* $k_{\text{rival}}$: 社内裏切り感度パラメーター（ $k_{\text{rival}} > 0$ ）
+* $n_{\text{insider}}$: 成功隠蔽の事実を知る社内関係者の推定人数（ $n_{\text{insider}} \ge 1$ ）
 
 ---
 
@@ -141,7 +141,7 @@ $$v(x) = \begin{cases} x^\alpha & (x \ge 0) \\ -\lambda (-x)^\beta & (x < 0) \en
 
 1. **攻撃ベクトル: 企業による通報者買収・口止め（Bribe Attack）**
    * **手法:** 成功隠蔽を行った企業が内部関係者全員に対して $C_{\text{bribe}}$ を提示し、合意のもとで沈黙を維持させようとする。
-   * **防御弁:** プロトコル層において「ファースト・ムーバー100%独占型懸賞金」を前払いエスクロー設定する。$R_{\text{bounty}}$ は企業の将来利益の一定割合（例: 20%）から自動算出され、$R_{\text{bounty}} > n_{\text{insider}} \cdot C_{\text{bribe}}$ を常時成立させる。企業側の買収予算が無限大とならない限り、囚人のジレンマにより買収協定は崩壊する。
+   * **防御弁:** プロトコル層において「ファースト・ムーバー100%独占型懸賞金」を前払いエスクロー設定する。 $R_{\text{bounty}}$ は企業の将来利益の一定割合（例: 20%）から自動算出され、 $R_{\text{bounty}} > n_{\text{insider}} \cdot C_{\text{bribe}}$ を常時成立させる。企業側の買収予算が無限大とならない限り、囚人のジレンマにより買収協定は崩壊する。
 2. **攻撃ベクトル: 通報者の身元逆引き・報復攻撃（Re-Identification Attack）**
    * **手法:** オンチェーンの投稿タイムスタンプや IP トラフィック、トークン引き出しパターンから通報者個人を特定・懲戒する。
    * **防御弁:** ZKP 署名（zk-SNARKs: Groth16 プロトコル）により、アドレスや IP を遮断した状態でのメンバーシップ証明を実現する。さらに、付与された懸賞金は Tornado 型ミックスプールおよびタイムロック分割コントラクトを経由して小分け引き出しされるため、オンチェーン・トラッキングによる個人特定は暗号学的に不可能となる。
@@ -150,12 +150,12 @@ $$v(x) = \begin{cases} x^\alpha & (x \ge 0) \\ -\lambda (-x)^\beta & (x < 0) \en
 
 ## 1.6 境界条件と既知の限界（Open Issues）
 
-* **前提条件（Assumptions）:** 本章のゲーム理論的均衡は、内部関係者が複数名（$n_{\text{insider}} \ge 2$）存在し、かつブロックチェーン上の懸賞金エスクローが現実法域の差押えから隔離されていることを前提とする。
+* **前提条件（Assumptions）:** 本章のゲーム理論的均衡は、内部関係者が複数名（ $n_{\text{insider}} \ge 2$ ）存在し、かつブロックチェーン上の懸賞金エスクローが現実法域の差押えから隔離されていることを前提とする。
 * **想定される破綻モード（Failure Modes）:**
-  * 伝統的銀行口座（非CBDC）に対する成功ロイヤリティ・罰則の自動強制執行（Clawback）のAPI不在（関連: [ISSUE-022](../../issues/FORGE_ISSUES_JP.md)）。
-  * 社内二重投資警告機能に対する現場開発チームのローカル端末隠蔽工作（関連: [ISSUE-020](../../issues/FORGE_ISSUES_JP.md)）。
+  * 伝統的銀行口座（非CBDC）に対する成功ロイヤリティ・罰則の自動強制執行（Clawback）のAPI不在（関連: [ISSUE-022](../../../issues/FORGE_ISSUES_JP.md)）。
+  * 社内二重投資警告機能に対する現場開発チームのローカル端末隠蔽工作（関連: [ISSUE-020](../../../issues/FORGE_ISSUES_JP.md)）。
 * **監査・PoC検証要件:** マルチエージェントシミュレーションによる $n_{\text{insider}}$ 変動時のナッシュ均衡収束速度の検証。
 
 ---
 
-[← 目次に戻る](../../README.md) | [第2章 SATORI補空間相転移とZKP文脈剥離 →](./02_satori_zkp.ja.md)
+[← 目次に戻る](../../../README.md) | [第2章 SATORI補空間相転移とZKP文脈剥離 →](./02_satori_zkp.ja.md)

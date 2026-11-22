@@ -1,6 +1,6 @@
 # Chapter 2 SATORI Complementary Space Phase Transition Algorithm and ZKP Context Detachment Engine
 
-[← Chapter 1 System Overview](./01_system_overview.en.md) | [Back to Index](../../README.md) | [Chapter 3 Proof-of-Trust Layer: ROOTS & TFA →](./03_proof_of_trust.en.md)
+[← Chapter 1 System Overview](./01_system_overview.en.md) | [Back to Index](../../../README.md) | [Chapter 3 Proof-of-Trust Layer: ROOTS & TFA →](./03_proof_of_trust.en.md)
 
 ## Overview & Purpose
 
@@ -156,7 +156,7 @@ $$\mathcal{K}_{\text{fail}} = \bigcup_{i=1}^{N} B_{\epsilon_i}(\mathbf{z}_i), \q
 
 Regularized definition of the Failure Saturation Rate $S_{\text{rate}} \in [0, 1]$ in spatial domain $\Omega$:
 
-$$S_{\text{rate}} = \min \left( 1.0, \; \frac{\text{Vol}(\mathcal{K}_{\text{fail}} \cap \Omega)}{\max \left( \text{Vol}(\Omega) - \text{Vol}(\mathcal{X}_{\text{core}}), \; \epsilon_{\text{vol}} \right)} \right)$$
+$$S_{\text{rate}} = \min \left( 1.0, \; \frac_{\text{Vol}(\mathcal{K}_{\text{fail}} \cap \Omega)}{\max \left( \text{Vol}(\Omega) - \text{Vol}(\mathcal{X}_{\text{core}}), \; \epsilon_{\text{vol}} \right)} \right)$$
 
 * $B_{\epsilon_i}(\mathbf{z}_i)$: Failure ball centered at $\mathbf{z}_i$ with radius $\epsilon_i$ scaled by the ROOTS score ($r_0 > 0, \; k = 3$)
 * $\text{Vol}(\cdot)$: Hypervolume by Lebesgue measure on $\mathbb{R}^d$
@@ -190,8 +190,8 @@ We present representative attacks and vulnerabilities anticipated against the SA
 
 * **Assumptions:** The complementary space phase transition in this chapter assumes that physical laws in the target technological domain are continuous and that the failure region $\mathcal{K}_{\text{fail}}$ can be approximated as a connected closed set within the compressed latent space $\mathbb{R}^d$.
 * **Failure Modes:**
-  * Inability to reach the $S_{\text{rate}} \ge 0.99$ critical threshold in ultra-niche domains due to data sparsity (See: [ISSUE-009](../../issues/FORGE_ISSUES_EN.md)).
-  * Increased prover-side computational overhead resulting from growing circuit constraints in ZKP stealth matching (Groth16) (See: [ISSUE-008](../../issues/FORGE_ISSUES_EN.md)).
+  * Inability to reach the $S_{\text{rate}} \ge 0.99$ critical threshold in ultra-niche domains due to data sparsity (See: [ISSUE-009](../../../issues/FORGE_ISSUES_EN.md)).
+  * Increased prover-side computational overhead resulting from growing circuit constraints in ZKP stealth matching (Groth16) (See: [ISSUE-008](../../../issues/FORGE_ISSUES_EN.md)).
 * **Verification / PoC Requirements:** Quantitative evaluation of $\mathbf{x}^*$ convergence accuracy and false-positive rates from non-convex failure regions in synthetic benchmark spaces ($d = 3, 5$).
 
-[← Chapter 1 System Overview](./01_system_overview.en.md) | [Back to Index](../../README.md) | [Chapter 3 Proof-of-Trust Layer: ROOTS & TFA →](./03_proof_of_trust.en.md)
+[← Chapter 1 System Overview](./01_system_overview.en.md) | [Back to Index](../../../README.md) | [Chapter 3 Proof-of-Trust Layer: ROOTS & TFA →](./03_proof_of_trust.en.md)

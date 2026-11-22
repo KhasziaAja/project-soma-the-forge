@@ -1,10 +1,10 @@
 # 第3章 自律型B2B業務ギルド：SOMA Guild 24時間分散開発＆「負の知財」循環システム
 
-[← 第2章 PAIOS物理・エッジセンシング層](./02_paios_physical_mining.ja.md) | [目次に戻る](../../README.md) | [第4章 分散型トークノミクス＆金融エンジニアリング →](./04_tokenomics_finance.ja.md)
+[← 第2章 PAIOS物理・エッジセンシング層](./02_paios_physical_mining.ja.md) | [目次に戻る](../../../README.md) | [第4章 分散型トークノミクス＆金融エンジニアリング →](./04_tokenomics_finance.ja.md)
 
 ## 概要と目的
 
-本モジュールは、従来の同期型労働環境からドロップアウトした高度IT・専門人材を非同期・無摩擦のプロダクションユニットへ再編成し、地球の自転（時差）を利用した24時間バトンリレーで企業の塩漬け業務（技術的負債）を消化する **SOMA Guild** の仕様を定義する。感情労働を遮断するドライガバナンス（3段階選別フィルター）、SOS連続発動時の自動再解体関数 $\Phi(\text{Task}_{\text{stagnant}})$、および失敗ログを3重文脈剥離（FDR-V2）してショートカット可能性スコア $\text{SC}_{\text{score}}$ を算出する SATORI 連携パイプラインを確定する。
+本モジュールは、従来の同期型労働環境からドロップアウトした高度IT・専門人材を非同期・無摩擦のプロダクションユニットへ再編成し、地球の自転（時差）を利用した24時間バトンリレーで企業の塩漬け業務（技術的負債）を消化する **SOMA Guild** の仕様を定義する。感情労働を遮断するドライガバナンス（3段階選別フィルター）、SOS連続発動時の自動再解体関数 $\Phi(\text{Task}_{\text{stagnant}})$ 、および失敗ログを3重文脈剥離（FDR-V2）してショートカット可能性スコア $\text{SC}_{\text{score}}$ を算出する SATORI 連携パイプラインを確定する。
 
 ## 3.1 ドロップアウトエリート層の再資源化と「24時間時差リレー分散処理」
 
@@ -214,21 +214,21 @@ SOMA Guild は、従来の労働形態（同時刻・同空間での同期型労
 
 ### 2) Game Theory & Incentives
 
-「体調不良ボタン（SOS）」のモラルハザード（タスクの無断たらい回し・スパム辞退）防止とタスク引き継ぎゲームの利得行列 $(U_{\text{worker}}, U_{\text{guild}})$：
+「体調不良ボタン（SOS）」のモラルハザード（タスクの無断たらい回し・スパム辞退）防止とタスク引き継ぎゲームの利得行列 $(U_{\text{worker}}, U_{\text{guild}})$ ：
 
-| 行動選択 | $U_{\text{worker}}$（ワーカー利得） | $U_{\text{guild}}$（ギルド利得） |
+| 行動選択 | $U_{\text{worker}}$ （ワーカー利得） | $U_{\text{guild}}$ （ギルド利得） |
 | :--- | :---: | :---: |
 | **$A_1$: 完遂（Complete Task）** | $R_{\text{task}} - C_{\text{effort}} + \Delta \text{Score}_{\text{trust}}$ | $V_{\text{deliverable}} - R_{\text{task}}$ |
 | **$A_2$: 正当なSOS辞退（Legitimate SOS）** | $0 - D_{\text{stake\_lock}} + \text{Rebated}_{\text{on\_validation}}$ | $0$ （プールへ再解体・再投入） |
 | **$A_3$: 悪質なスパム辞退/放置（Spam Drop）** | $-D_{\text{stake\_slashed}} - \Delta \text{Score}_{\text{penalty}}$ | $-C_{\text{delay\_loss}}$ |
 
-* **均衡条件**: 連続不履行や悪意あるタスク抱え込み（$A_3$）に対しては、預託信用デポジットの没収（$-D_{\text{stake\_slashed}}$）と信頼スコア減点ペナルティが即座に発動する一方、真の体調不良による早期SOS申告（$A_2$）はペナルティゼロで受容される。これにより、無理をして品質を劣化させるよりも「即座にSOSを押してバトンを渡す」または「完遂する」ことが支配戦略となる。
+* **均衡条件**: 連続不履行や悪意あるタスク抱え込み（ $A_3$ ）に対しては、預託信用デポジットの没収（ $-D_{\text{stake\_slashed}}$ ）と信頼スコア減点ペナルティが即座に発動する一方、真の体調不良による早期SOS申告（ $A_2$ ）はペナルティゼロで受容される。これにより、無理をして品質を劣化させるよりも「即座にSOSを押してバトンを渡す」または「完遂する」ことが支配戦略となる。
 
 ### 3) Mathematical Formula
 
-#### 式 3.1: ショートカット可能性スコア（$\text{SC}_{\text{score}}$）確定結合式
+#### 式 3.1: ショートカット可能性スコア（ $\text{SC}_{\text{score}}$ ）確定結合式
 
-無次元化パラメータベクトル $\mathbf{r}$ と失効特許グラフ $\mathcal{G}_{\text{patent}}$ のコサイン類似度、および技術進歩ギャップ $\Delta \text{Tech}_{\text{gap}} \ge 0$ をロジスティック結合した確率スコア $\text{SC}_{\text{score}} \in (0, 1)$：
+無次元化パラメータベクトル $\mathbf{r}$ と失効特許グラフ $\mathcal{G}_{\text{patent}}$ のコサイン類似度、および技術進歩ギャップ $\Delta \text{Tech}_{\text{gap}} \ge 0$ をロジスティック結合した確率スコア $\text{SC}_{\text{score}} \in (0, 1)$ ：
 
 $$\text{SC}_{\text{score}} = \sigma\left( w_1 \cdot \text{Similarity}(\mathbf{r}, \mathcal{G}_{\text{patent}}) + w_2 \cdot \ln\left(1 + \Delta \text{Tech}_{\text{gap}}\right) - w_3 \cdot \epsilon_{\text{noise}} - b_0 \right)$$
 
@@ -239,16 +239,16 @@ $$\sigma(x) = \frac{1}{1 + e^{-x}}$$
 * $\epsilon_{\text{noise}} \ge 0$: 差分プライバシー注入による情報希薄化ペナルティ
 * $w_1, w_2, w_3 > 0, \; b_0 \in \mathbb{R}$: SATORI キャリブレーション重み定数
 
-#### 式 3.2: タスク自動再解体関数 $\Phi(\text{Task}_{\text{stagnant}})$（ゼロ除算ガード・上限キャップ版）
+#### 式 3.2: タスク自動再解体関数 $\Phi(\text{Task}_{\text{stagnant}})$ （ゼロ除算ガード・上限キャップ版）
 
 連続SOS発動回数 $N_{\text{sos}} \ge 3$ または24時間無進捗時に起動し、分割数 $M \in [2, M_{\max}]$ を決定する発散防止型アルゴリズム：
 
-$$M = \min\left( M_{\max}, \; \max\left( 2, \; \left\lceil \frac{\text{Budget}_{\text{time\_orig}}}{\max\left(\text{Target}_{\text{unit\_time}}, \; 15\text{ min}\right)} \times \left( 1 + \alpha_{\text{difficulty}} \cdot N_{\text{sos}} \right) \right\rceil \right) \right)$$
+$$M = \min\left( M_{\max}, \; \max\left( 2, \; \left\lceil \frac_{\text{Budget}_{\text{time\_orig}}}{\max\left(\text{Target}_{\text{unit\_time}}, \; 15\text{ min}\right)} \times \left( 1 + \alpha_{\text{difficulty}} \cdot N_{\text{sos}} \right) \right\rceil \right) \right)$$
 
 $$\Phi(\text{Task}_{\text{stagnant}}) \to \left\{ \text{Chunk}_1, \text{Chunk}_2, \dots, \text{Chunk}_M \right\}$$
 
 * $\text{Budget}_{\text{time\_orig}} \ge 15\text{ min}$: 元タスクの標準見積時間
-* $\max(\text{Target}_{\text{unit\_time}}, 15\text{ min})$: 分母のゼロ除算および過細分化（$M \to \infty$）を防ぐ $15$ 分下限リミッター
+* $\max(\text{Target}_{\text{unit\_time}}, 15\text{ min})$: 分母のゼロ除算および過細分化（ $M \to \infty$ ）を防ぐ $15$ 分下限リミッター
 * $\alpha_{\text{difficulty}} = 0.25$: SOS発動回数に応じた難易度補正係数
 * $M_{\max} = 500$: 単一契約からの最大チャンク分割上限
 
@@ -265,8 +265,8 @@ $$\Phi(\text{Task}_{\text{stagnant}}) \to \left\{ \text{Chunk}_1, \text{Chunk}_2
 
 * **前提条件（Assumptions）:** 本章の 24 時間非同期リレーは、Engine A および Engine B の両タイムゾーンにおいて最低限のアクティブノード流動性が確保されていることを前提とする。
 * **想定される破綻モード（Failure Modes）:**
-  * 超高度・密結合なレガシーシステムにおいて、15〜30分単位のマイクロチャンク分割（$\Phi$）を行うことで文脈喪失（コンテキスト断絶）が発生する問題（関連: [ISSUE-004](../../issues/SOMA_ISSUES_JP.md)）。
-  * 生活保護等の受給者（Engine A）が急激なタスク消化により「福祉の崖（Benefit Cliff）」を超えて受給資格を喪失するリスクに対する自動ロック制御（関連: [ISSUE-007](../../issues/SOMA_ISSUES_JP.md)）。
+  * 超高度・密結合なレガシーシステムにおいて、15〜30分単位のマイクロチャンク分割（ $\Phi$ ）を行うことで文脈喪失（コンテキスト断絶）が発生する問題（関連: [ISSUE-004](../../../issues/SOMA_ISSUES_JP.md)）。
+  * 生活保護等の受給者（Engine A）が急激なタスク消化により「福祉の崖（Benefit Cliff）」を超えて受給資格を喪失するリスクに対する自動ロック制御（関連: [ISSUE-007](../../../issues/SOMA_ISSUES_JP.md)）。
 * **監査・PoC検証要件:** 実企業のレガシーコードリファクタリング案件を用いた、チャンク分割後の統合テスト合格率および納期遵守率のベンチマーク測定。
 
-[← 第2章 PAIOS物理・エッジセンシング層](./02_paios_physical_mining.ja.md) | [目次に戻る](../../README.md) | [第4章 分散型トークノミクス＆金融エンジニアリング →](./04_tokenomics_finance.ja.md)
+[← 第2章 PAIOS物理・エッジセンシング層](./02_paios_physical_mining.ja.md) | [目次に戻る](../../../README.md) | [第4章 分散型トークノミクス＆金融エンジニアリング →](./04_tokenomics_finance.ja.md)

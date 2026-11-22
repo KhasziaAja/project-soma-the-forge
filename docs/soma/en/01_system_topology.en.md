@@ -1,6 +1,6 @@
 # Chapter 1: Executive Summary & System Architecture — "Value in Existence" Framework & ESG/SIB Humanitarian Narrative
 
-[← Back to Index](../../README.md) | [Chapter 2: PAIOS Physical & Edge Sensing Layer →](./02_paios_physical_mining.en.md)
+[← Back to Index](../../../README.md) | [Chapter 2: PAIOS Physical & Edge Sensing Layer →](./02_paios_physical_mining.en.md)
 
 ## Overview & Purpose
 
@@ -209,8 +209,8 @@ $$P_{\text{SIB}}(t) = \rho_{\text{SIB}} \cdot \max\left( 0, \; V_{\text{SIB}}(t)
 
 * **Assumptions:** Net-zero living cost convergence assumes wholesale infrastructure procurement costs remain below market DaaS/B2B data liquidation yields and municipal SIB contracts recognize third-party ZKP-audited metrics.
 * **Failure Modes:**
-  * Liquidity shortage during early bootstrapping due to insufficient enterprise data buyers and B2B clients (See: [ISSUE-010](../../issues/SOMA_ISSUES_EN.md)).
-  * Benefit offset and income-assessment friction between existing public welfare systems and in-kind credit distributions (See: [ISSUE-006](../../issues/SOMA_ISSUES_EN.md)).
+  * Liquidity shortage during early bootstrapping due to insufficient enterprise data buyers and B2B clients (See: [ISSUE-010](../../../issues/SOMA_ISSUES_EN.md)).
+  * Benefit offset and income-assessment friction between existing public welfare systems and in-kind credit distributions (See: [ISSUE-006](../../../issues/SOMA_ISSUES_EN.md)).
 * **Verification / PoC Requirements:** 12-month empirical tracking of municipal welfare/medical expenditure reductions and R2S cost-leverage ratios across a pilot cohort ($N \ge 100$ households).
 
-[← Back to Index](../../README.md) | [Chapter 2: PAIOS Physical & Edge Sensing Layer →](./02_paios_physical_mining.en.md)
+[← Back to Index](../../../README.md) | [Chapter 2: PAIOS Physical & Edge Sensing Layer →](./02_paios_physical_mining.en.md)

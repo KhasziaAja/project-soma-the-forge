@@ -1,6 +1,6 @@
 # Chapter 3 Proof-of-Trust Layer: ROOTS (Physical Cost) and TFA (Triple-Filter Audit) Protocol
 
-[← Chapter 2 SATORI Complementary Space Phase Transition & ZKP](./02_satori_zkp.en.md) | [Back to Index](../../README.md) | [Chapter 4 Economic & Tokenomics Mathematics: D-LOG Protocol →](./04_tokenomics.en.md)
+[← Chapter 2 SATORI Complementary Space Phase Transition & ZKP](./02_satori_zkp.en.md) | [Back to Index](../../../README.md) | [Chapter 4 Economic & Tokenomics Mathematics: D-LOG Protocol →](./04_tokenomics.en.md)
 
 ## Overview & Purpose
 
@@ -166,11 +166,11 @@ We present anticipated attack vectors and defense valves for the ROOTS and TFA p
 
 * **Assumptions:** The physical existence proof (AO) in this chapter assumes that data-generating nodes operate on physical compute hardware or sensor-coupled environments equipped with a hardware Root of Trust (TPM / PUF / TEE).
 * **Failure Modes:**
-  * Risk of genuine micro-noise from high-precision quantum sensors or spectrometers being misclassified as AI overfitting by the NNS filter (See: [ISSUE-001](../../issues/FORGE_ISSUES_EN.md)).
-  * Risk of intuitive or genius research breakthroughs (with minimal intermediate trials $N_{\text{trial}}$) being penalized as "Leaps Without Suffering" by the PT filter (See: [ISSUE-002](../../issues/FORGE_ISSUES_EN.md)).
-  * Failure of AO physical verification in cloud virtualized environments (AWS / Docker / Google TPU) due to hypervisor normalization of thermal and power waveforms (See: [ISSUE-003](../../issues/FORGE_ISSUES_EN.md)).
-  * Over-attenuation of valid data in inherently noisy fields (e.g., plasma physics, biotechnology) caused by the purity exponent $k \ge 3$ (See: [ISSUE-004](../../issues/FORGE_ISSUES_EN.md)).
-  * Timestamp discontinuities caused by network dropouts in offline laboratory automation equipment (See: [ISSUE-005](../../issues/FORGE_ISSUES_EN.md)).
+  * Risk of genuine micro-noise from high-precision quantum sensors or spectrometers being misclassified as AI overfitting by the NNS filter (See: [ISSUE-001](../../../issues/FORGE_ISSUES_EN.md)).
+  * Risk of intuitive or genius research breakthroughs (with minimal intermediate trials $N_{\text{trial}}$) being penalized as "Leaps Without Suffering" by the PT filter (See: [ISSUE-002](../../../issues/FORGE_ISSUES_EN.md)).
+  * Failure of AO physical verification in cloud virtualized environments (AWS / Docker / Google TPU) due to hypervisor normalization of thermal and power waveforms (See: [ISSUE-003](../../../issues/FORGE_ISSUES_EN.md)).
+  * Over-attenuation of valid data in inherently noisy fields (e.g., plasma physics, biotechnology) caused by the purity exponent $k \ge 3$ (See: [ISSUE-004](../../../issues/FORGE_ISSUES_EN.md)).
+  * Timestamp discontinuities caused by network dropouts in offline laboratory automation equipment (See: [ISSUE-005](../../../issues/FORGE_ISSUES_EN.md)).
 * **Verification / PoC Requirements:** Error margin calibration of the thermodynamic power model $\hat{E}_{\text{model}}$ across physical GPU clusters and direct laboratory sensor hardware.
 
-[← Chapter 2 SATORI Complementary Space Phase Transition & ZKP](./02_satori_zkp.en.md) | [Back to Index](../../README.md) | [Chapter 4 Economic & Tokenomics Mathematics: D-LOG Protocol →](./04_tokenomics.en.md)
+[← Chapter 2 SATORI Complementary Space Phase Transition & ZKP](./02_satori_zkp.en.md) | [Back to Index](../../../README.md) | [Chapter 4 Economic & Tokenomics Mathematics: D-LOG Protocol →](./04_tokenomics.en.md)

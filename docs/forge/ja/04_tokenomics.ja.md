@@ -1,6 +1,6 @@
 # 第4章 経済・トークノミクス数理：D-LOGプロトコルと3軸動的境界線（v2.0）
 
-[← 第3章 信頼証明レイヤー：ROOTSとTFA](./03_proof_of_trust.ja.md) | [目次に戻る](../../README.md) | [第5章 統合開発モデル：D&Aと動的ロイヤリティ →](./05_d_and_a_model.ja.md)
+[← 第3章 信頼証明レイヤー：ROOTSとTFA](./03_proof_of_trust.ja.md) | [目次に戻る](../../../README.md) | [第5章 統合開発モデル：D&Aと動的ロイヤリティ →](./05_d_and_a_model.ja.md)
 
 ## 概要と目的
 
@@ -72,7 +72,7 @@ Tier 1 独占オプション（最大 5〜10 枠）を購入した大企業 $C$ 
 
 ### 式 4.1: 3軸動的プライシング時価算定式（飽和クランプ版）
 
-データ資産 $i$ の時刻 $t$ における動的ライセンス価格 $P_{\text{total}}(i, t)$：
+データ資産 $i$ の時刻 $t$ における動的ライセンス価格 $P_{\text{total}}(i, t)$ ：
 
 $$
 P_{\text{total}}(i, t) = P_{\text{base}}(i) \cdot \left( 1 + \kappa_{\text{demand}} \cdot \ln(1 + D_{\text{query}}(t)) \right) \cdot \Phi_{\text{lock}}(t, \Delta_{\text{progress}})
@@ -82,7 +82,7 @@ $$
 P_{\text{base}}(i) = C_{\text{phys}}(i) \cdot (\text{ROOTS}_i)^k \cdot \left( 1 + \text{SC}_i \right)
 $$
 
-* $P_{\text{base}}(i) > 0$: 物理コスト $C_{\text{phys}}(i)$、信頼度 $\text{ROOTS}_i \in [0, 1]$（$k = 3$）、ショートカット指数 $\text{SC}_i \ge 0$ に基づく基準価格
+* $P_{\text{base}}(i) > 0$: 物理コスト $C_{\text{phys}}(i)$ 、信頼度 $\text{ROOTS}_i \in [0, 1]$ （ $k = 3$ ）、ショートカット指数 $\text{SC}_i \ge 0$ に基づく基準価格
 
 * $D_{\text{query}}(t) \ge 0$: 直近ウィンドウ内の ZKP ステルス照会トラフィック数（対数圧縮によりスパイク暴騰を抑制）
 
@@ -92,7 +92,7 @@ $$
 
 ### 式 4.2: タイムロック減衰および進捗連動係数（指数発散ガード版）
 
-ハイパーインフレ的な価格暴騰を防ぎつつ、無進捗の塩漬け買占めをペナルティ化する有界係数 $\Phi_{\text{lock}} \in [\Phi_{\text{min}}, \Phi_{\text{max}}]$：
+ハイパーインフレ的な価格暴騰を防ぎつつ、無進捗の塩漬け買占めをペナルティ化する有界係数 $\Phi_{\text{lock}} \in [\Phi_{\text{min}}, \Phi_{\text{max}}]$ ：
 
 $$
 \Phi_{\text{lock}}(t, \Delta_{\text{progress}}) = \text{clamp}_{[\Phi_{\text{min}}, \Phi_{\text{max}}]} \left( \exp\left( -\lambda_{\text{decay}} \cdot t \right) \cdot \alpha^{\min\left(T_B \cdot \Delta_{\text{progress}}, \; M_{\text{cap}}\right)} \right)
@@ -100,13 +100,13 @@ $$
 
 * $\lambda_{\text{decay}} > 0$: 時間経過による自然減衰率（Tier 1 $\to$ Tier 2 $\to$ Tier 3 への価格低下）
 
-* $\alpha > 1.0$: 正当な開発進捗に対する価値増幅ベース（例: $\alpha = 1.15$）
+* $\alpha > 1.0$: 正当な開発進捗に対する価値増幅ベース（例: $\alpha = 1.15$ ）
 
 * $T_B \ge 0$: 進捗マイルストーン評価係数
 
 * $\Delta_{\text{progress}} \in [0, 1]$: 検証済開発進捗スコア
 
-* $M_{\text{cap}} > 0$: 指数発散（$\alpha^x \to \infty$）を防ぐ上限キャップ定数
+* $M_{\text{cap}} > 0$: 指数発散（ $\alpha^x \to \infty$ ）を防ぐ上限キャップ定数
 
 * $\Phi_{\text{min}} = 0.05, \; \Phi_{\text{max}} = 5.0$: 係数の下限・上限クランプ境界
 
@@ -136,7 +136,7 @@ D-LOG プロトコルに対して想定される経済・市場攻撃ベクト�
 
    * **手法:** 競合に技術を使わせないため、Tier 1 の限定スロットを全枠買い占め、開発を行わず放置する。
 
-   * **防御弁:** スロット上限（最大 5〜10 枠）のハードコード制約に加え、式 4.2 の進捗ハッシュ未提出ペナルティにより、$\Delta_{\text{progress}} = 0$ のまま一定時間が経過すると独占権が自動失効し、強制的に Tier 2（準一般市場）へ開放される。
+   * **防御弁:** スロット上限（最大 5〜10 枠）のハードコード制約に加え、式 4.2 の進捗ハッシュ未提出ペナルティにより、 $\Delta_{\text{progress}} = 0$ のまま一定時間が経過すると独占権が自動失効し、強制的に Tier 2（準一般市場）へ開放される。
 
 2. **攻撃ベクトル: レモン市場化・ジャンクデータによる高位データ抜き取り（Barter Arbitrage Attack）**
 
@@ -150,14 +150,14 @@ D-LOG プロトコルに対して想定される経済・市場攻撃ベクト�
 
 * **想定される破綻モード（Failure Modes）:**
 
-  * Tier 3（C2Cフリーマーケット）における低品質データ過剰流入による「レモン市場・流動性死のスパイラル」リスク（関連: [ISSUE-014](../../issues/FORGE_ISSUES_JP.md)）。
+  * Tier 3（C2Cフリーマーケット）における低品質データ過剰流入による「レモン市場・流動性死のスパイラル」リスク（関連: [ISSUE-014](../../../issues/FORGE_ISSUES_JP.md)）。
 
-  * 長期開発サイクルを要する材料・創薬ニッチ分野における早期タイムディケイ（底値暴落）問題（関連: [ISSUE-011](../../issues/FORGE_ISSUES_JP.md)）。
+  * 長期開発サイクルを要する材料・創薬ニッチ分野における早期タイムディケイ（底値暴落）問題（関連: [ISSUE-011](../../../issues/FORGE_ISSUES_JP.md)）。
 
-  * 0.0001円単位の超微細アクセスにおける L1/L2 ガス代逆転リスク（関連: [ISSUE-013](../../issues/FORGE_ISSUES_JP.md)）。
+  * 0.0001円単位の超微細アクセスにおける L1/L2 ガス代逆転リスク（関連: [ISSUE-013](../../../issues/FORGE_ISSUES_JP.md)）。
 
-  * マイナー分野の底値買戻し保証（Floor-Price Buy-back）による財団トレジャリー滞留リスク（関連: [ISSUE-015](../../issues/FORGE_ISSUES_JP.md)）。
+  * マイナー分野の底値買戻し保証（Floor-Price Buy-back）による財団トレジャリー滞留リスク（関連: [ISSUE-015](../../../issues/FORGE_ISSUES_JP.md)）。
 
 * **監査・PoC検証要件:** エージェントベース経済シミュレーション（cadCAD）による過剰供給スパイク時の $R_{\text{burn}}(t)$ 収束安定性テスト。
 
-[← 第3章 信頼証明レイヤー：ROOTSとTFA](./03_proof_of_trust.ja.md) | [目次に戻る](../../README.md) | [第5章 統合開発モデル：D&Aと動的ロイヤリティ →](./05_d_and_a_model.ja.md)
+[← 第3章 信頼証明レイヤー：ROOTSとTFA](./03_proof_of_trust.ja.md) | [目次に戻る](../../../README.md) | [第5章 統合開発モデル：D&Aと動的ロイヤリティ →](./05_d_and_a_model.ja.md)

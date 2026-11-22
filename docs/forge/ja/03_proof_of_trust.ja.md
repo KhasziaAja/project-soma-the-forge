@@ -1,6 +1,6 @@
 # 第3章 信頼証明レイヤー：ROOTS（物理代償）とTFA（3層監査）プロトコル
 
-[← 第2章 SATORI補空間相転移とZKP文脈剥離](./02_satori_zkp.ja.md) | [目次に戻る](../../README.md) | [第4章 経済・トークノミクス数理：D-LOGプロトコル →](./04_tokenomics.ja.md)
+[← 第2章 SATORI補空間相転移とZKP文脈剥離](./02_satori_zkp.ja.md) | [目次に戻る](../../../README.md) | [第4章 経済・トークノミクス数理：D-LOGプロトコル →](./04_tokenomics.ja.md)
 
 ## 概要と目的
 
@@ -92,8 +92,8 @@ ROOTS 鑑定書および TFA 監査ログのデータ構造を以下に定義す
 | **投稿者: 捏造データを提出** | $(-S_{\text{stake}}, \; \mu \cdot S_{\text{stake}} - C_{\text{validation}})$ | $(-S_{\text{stake}}, \; 0)$ （TFA自動検知時） |
 | **投稿者: 本物データを提出** | $(R_{\text{mint}}, \; -C_{\text{validation}})$ | $(R_{\text{mint}}, \; 0)$ |
 
-* **配分条件:** $\mu = 0.50$（没収額の $50\%$ を検知者へ懸賞金付与、$50\%$ をプラットフォーム補償基金へ充当）
-* $C_{\text{validation}}$: 物理追試および計算検証にかかる実コスト（$C_{\text{validation}} > 0$）
+* **配分条件:** $\mu = 0.50$ （没収額の $50\%$ を検知者へ懸賞金付与、 $50\%$ をプラットフォーム補償基金へ充当）
+* $C_{\text{validation}}$: 物理追試および計算検証にかかる実コスト（ $C_{\text{validation}} > 0$ ）
 * $R_{\text{mint}}$: 認証通過時に付与される D-LOG トークン報酬
 
 本利得構造により、以下のステーキング下限条件が満たされる限り、悪意ある投稿の期待値は負となり、偽造投稿インセンティブが構造的に消滅する：
@@ -106,7 +106,7 @@ ROOTS 総合鑑定スコア算定式、TFA 3層個別スコア（NNS / PT / AO�
 
 ### 式 3.1: ROOTS 総合判定スコア算定式（値域保証版）
 
-データの物理的実存純度を示すスコア $\text{ROOTS}_i \in [0, 1]$：
+データの物理的実存純度を示すスコア $\text{ROOTS}_i \in [0, 1]$ ：
 
 $$\text{ROOTS}_i = \text{clamp}_{[0, 1]} \left( w_1 \cdot S_{\text{NNS}} + w_2 \cdot S_{\text{PT}} + w_3 \cdot S_{\text{AO}} \right)$$
 
@@ -138,8 +138,8 @@ $$S_{\text{PT}} = 1 - \exp\left( -\beta_2 \cdot \frac{N_{\text{trial}}}{D_{\text
 
 $$S_{\text{AO}} = \mathbb{I}_{\text{PUF}} \cdot \exp\left( -\beta_3 \cdot \left| \frac{E_{\text{measured}} - \hat{E}_{\text{model}}(T_{\text{exec}}, \Delta T_{\text{GPU}})}{\max(E_{\text{measured}}, \epsilon_E)} \right| \right)$$
 
-* $\mathbb{I}_{\text{PUF}} \in \{0, 1\}$: ハードウェア PUF / TPM 暗号署名の検証結果（一致なら $1$、不一致なら即座に $0$）
-* $E_{\text{measured}} > 0$: 実測消費電力量（$\text{kWh}$）
+* $\mathbb{I}_{\text{PUF}} \in \{0, 1\}$: ハードウェア PUF / TPM 暗号署名の検証結果（一致なら $1$ 、不一致なら即座に $0$ ）
+* $E_{\text{measured}} > 0$: 実測消費電力量（ $\text{kWh}$ ）
 * $\hat{E}_{\text{model}}(\cdot)$: 実行時間 $T_{\text{exec}}$ および GPU 熱変化 $\Delta T_{\text{GPU}}$ から熱力学モデルが予測する理論消費電力量
 * $\epsilon_E = 10^{-9}$: ゼロ除算防止定数
 
@@ -166,11 +166,11 @@ ROOTS および TFA プロトコルに対して想定される攻撃ベクトル
 
 * **前提条件（Assumptions）:** 本章の物理実存証明（AO）は、データ生成ノードがハードウェア信頼基点（TPM / PUF / TEE）を搭載した物理計算機またはセンサー直結環境で稼働していることを前提とする。
 * **想定される破綻モード（Failure Modes）:**
-  * 高精度量子センサー・分光器等における微細ノイズが NNS フィルターにより AI 過剰適合と誤判定されるリスク（関連: [ISSUE-001](../../issues/FORGE_ISSUES_JP.md)）。
-  * 研究者の直感的・天才的ブレイクスルー（中間試行 $N_{\text{trial}}$ が極小）が PT フィルターで「苦悩なき跳躍」として誤ペナルティを受けるリスク（関連: [ISSUE-002](../../issues/FORGE_ISSUES_JP.md)）。
-  * クラウド仮想環境（AWS / Docker / Google TPU）における熱・電力波形のハイパーバイザ正規化による AO 検証失敗（関連: [ISSUE-003](../../issues/FORGE_ISSUES_JP.md)）。
-  * 高ノイズ領域（プラズマ物理・バイオ等）における指数重み $k \ge 3$ による過減衰（関連: [ISSUE-004](../../issues/FORGE_ISSUES_JP.md)）。
-  * オフライン実験装置のタイムスタンプ不連続問題（関連: [ISSUE-005](../../issues/FORGE_ISSUES_JP.md)）。
+  * 高精度量子センサー・分光器等における微細ノイズが NNS フィルターにより AI 過剰適合と誤判定されるリスク（関連: [ISSUE-001](../../../issues/FORGE_ISSUES_JP.md)）。
+  * 研究者の直感的・天才的ブレイクスルー（中間試行 $N_{\text{trial}}$ が極小）が PT フィルターで「苦悩なき跳躍」として誤ペナルティを受けるリスク（関連: [ISSUE-002](../../../issues/FORGE_ISSUES_JP.md)）。
+  * クラウド仮想環境（AWS / Docker / Google TPU）における熱・電力波形のハイパーバイザ正規化による AO 検証失敗（関連: [ISSUE-003](../../../issues/FORGE_ISSUES_JP.md)）。
+  * 高ノイズ領域（プラズマ物理・バイオ等）における指数重み $k \ge 3$ による過減衰（関連: [ISSUE-004](../../../issues/FORGE_ISSUES_JP.md)）。
+  * オフライン実験装置のタイムスタンプ不連続問題（関連: [ISSUE-005](../../../issues/FORGE_ISSUES_JP.md)）。
 * **監査・PoC検証要件:** 実機 GPU クラスターおよび物理センサー環境における熱力学電力モデル $\hat{E}_{\text{model}}$ の誤差許容幅キャリブレーション。
 
-[← 第2章 SATORI補空間相転移とZKP文脈剥離](./02_satori_zkp.ja.md) | [目次に戻る](../../README.md) | [第4章 経済・トークノミクス数理：D-LOGプロトコル →](./04_tokenomics.ja.md)
+[← 第2章 SATORI補空間相転移とZKP文脈剥離](./02_satori_zkp.ja.md) | [目次に戻る](../../../README.md) | [第4章 経済・トークノミクス数理：D-LOGプロトコル →](./04_tokenomics.ja.md)

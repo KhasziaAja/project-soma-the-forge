@@ -1,6 +1,6 @@
 # Chapter 5: International Legal & Compliance Fortress — Dual-Mode Legal, Protocol 0, GDPR/ZKP, & US Tax
 
-[← Chapter 4: Decentralized Tokenomics & Financial Engineering](./04_tokenomics_finance.en.md) | [Back to Index](../../README.md) | [Chapter 6: Resilience & Architectural Extensibility →](./06_resilience_nasa_mode.en.md)
+[← Chapter 4: Decentralized Tokenomics & Financial Engineering](./04_tokenomics_finance.en.md) | [Back to Index](../../../README.md) | [Chapter 6: Resilience & Architectural Extensibility →](./06_resilience_nasa_mode.en.md)
 
 ## Overview & Purpose
 
@@ -207,9 +207,9 @@ $$\text{DeadMan}_{\text{flag}}(t) = \prod_{k \in \{\text{mmWave}, \text{Thermo},
 
 * **Assumptions:** Protocol 0 housing relies on strict adherence to gratuitous loan-for-use non-consideration rules in Japan (Civil Code Sec. 593) and non-residential program occupancy exemptions in the United States, both in contractual form and operational substance.
 * **Failure Modes:**
-  * Risk of US courts applying the Alter Ego doctrine across Entity A and Entity B if operational boundaries blur (See: [ISSUE-001](../../issues/SOMA_ISSUES_EN.md)).
-  * Potential friction between automated smart-lock deactivation and statutory prohibitions against self-help eviction under Japanese tenancy jurisprudence (See: [ISSUE-005](../../issues/SOMA_ISSUES_EN.md)).
-  * False-positive Dead-Man Switch triggers during prolonged deep sleep caused by illness (See: [ISSUE-011](../../issues/SOMA_ISSUES_EN.md)).
+  * Risk of US courts applying the Alter Ego doctrine across Entity A and Entity B if operational boundaries blur (See: [ISSUE-001](../../../issues/SOMA_ISSUES_EN.md)).
+  * Potential friction between automated smart-lock deactivation and statutory prohibitions against self-help eviction under Japanese tenancy jurisprudence (See: [ISSUE-005](../../../issues/SOMA_ISSUES_EN.md)).
+  * False-positive Dead-Man Switch triggers during prolonged deep sleep caused by illness (See: [ISSUE-011](../../../issues/SOMA_ISSUES_EN.md)).
 * **Verification / PoC Requirements:** Formal cross-border legal opinions from Japanese real-estate/labor counsel and US employment/tax counsel validating Entity A/B separation charters and Form 1099 automation.
 
-[← Chapter 4: Decentralized Tokenomics & Financial Engineering](./04_tokenomics_finance.en.md) | [Back to Index](../../README.md) | [Chapter 6: Resilience & Architectural Extensibility →](./06_resilience_nasa_mode.en.md)
+[← Chapter 4: Decentralized Tokenomics & Financial Engineering](./04_tokenomics_finance.en.md) | [Back to Index](../../../README.md) | [Chapter 6: Resilience & Architectural Extensibility →](./06_resilience_nasa_mode.en.md)

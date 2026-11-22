@@ -1,6 +1,6 @@
 # Chapter 7 Predictive Index: The Pulse (Failure Pulse) Signals and Market Anti-Corruptibility (v2.0)
 
-[← Chapter 6 Governance Anti-Corruptibility & International Compliance Circuit](./06_governance.en.md) | [Back to Index](../../README.md) | [Chapter 8 Legal, Geopolitical, and International Compliance Architecture →](./08_legal_compliance.en.md)
+[← Chapter 6 Governance Anti-Corruptibility & International Compliance Circuit](./06_governance.en.md) | [Back to Index](../../../README.md) | [Chapter 8 Legal, Geopolitical, and International Compliance Architecture →](./08_legal_compliance.en.md)
 
 ## Overview & Purpose
 
@@ -170,10 +170,10 @@ We present anticipated market manipulation and statistical attack vectors agains
 
 * **Failure Modes:**
 
-  * Risk of false-positive "technical wall" detections triggered by massive inflows of low-quality logs following social media buzzwords (See: [ISSUE-023](../../issues/FORGE_ISSUES_EN.md)).
+  * Risk of false-positive "technical wall" detections triggered by massive inflows of low-quality logs following social media buzzwords (See: [ISSUE-023](../../../issues/FORGE_ISSUES_EN.md)).
 
-  * Statistical boundary ambiguity between industry-wide R&D abandonment (withdrawal) and genuine technological breakthroughs (Quenches) (See: [ISSUE-024](../../issues/FORGE_ISSUES_EN.md)).
+  * Statistical boundary ambiguity between industry-wide R&D abandonment (withdrawal) and genuine technological breakthroughs (Quenches) (See: [ISSUE-024](../../../issues/FORGE_ISSUES_EN.md)).
 
 * **Verification / PoC Requirements:** Historical backtesting (Granger causality testing) of $P_{\text{signal}}(s, t)$ as a leading indicator against historical patent-filing surges and verified technological breakthroughs.
 
-[← Chapter 6 Governance Anti-Corruptibility & International Compliance Circuit](./06_governance.en.md) | [Back to Index](../../README.md) | [Chapter 8 Legal, Geopolitical, and International Compliance Architecture →](./08_legal_compliance.en.md)
+[← Chapter 6 Governance Anti-Corruptibility & International Compliance Circuit](./06_governance.en.md) | [Back to Index](../../../README.md) | [Chapter 8 Legal, Geopolitical, and International Compliance Architecture →](./08_legal_compliance.en.md)
